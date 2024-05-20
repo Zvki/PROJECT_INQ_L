@@ -29,11 +29,12 @@ void game::innitenemy()
 
 void game::innitbackg()
 {
-	if (!this->backgroundtexture_.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/background/1.png")) {
+	if(!this->backgroundtexture_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/BACKGROUND/bg.jpg"))
+	/*if (!this->backgroundtexture_.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/background/1.png"))*/ {
 		std::cout << "ERROR: COULD NOT FIND THE BACKGROUND TEXTURE \n";
 	}
 	this->background.setTexture(this->backgroundtexture_);
-	this->background.setScale(3.5f, 3.5f);
+	this->background.setScale(1.f, 1.f);
 	this->Tile = new tile();
 
 	this->Hub_ = new hub();
@@ -46,12 +47,12 @@ void game::innittile()
 
 void game::innitmenu()
 {
-	if (!this->menubg_texture_.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/MENU/mbg.png_large")) {
+	if (!this->menubg_texture_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/MENU/mbg.png_large")) {
 		std::cout << "ERROR: COULD NOT FIND THE BACKGROUND TEXTURE \n";
 	}
 	this->menubg_sprite_.setTexture(this->menubg_texture_);
 
-	if (!font_.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/FONT/Pixellettersfull-BnJ5.ttf")) {
+	if (!font_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/FONT/Pixellettersfull-BnJ5.ttf")) {
 		//ERROR
 	}
 
@@ -77,7 +78,7 @@ void game::innitmenu()
 
 void game::innitmusic()
 {
-	if(!this->music_.openFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/MUSIC/main-music.mp3"))
+	if(!this->music_.openFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/MUSIC/main-music.mp3"))
 	{
 		std::cout << "ERROR: COULD NOT FIND THE MUSIC\n";
 	}

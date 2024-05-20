@@ -33,8 +33,13 @@ bool tile::setupt(std::string tn)
 
 void tile::settiles()
 {
-		this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/FLOOR.png", 0, 960, true));
-		this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 992, true));
-		this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 1024, true));
-		this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 1056, true));
+		//this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/FLOOR.png", 0, 960, true));
+		//this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 992, true));
+		//this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 1024, true));
+		//this->tiles.push_back(new tile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 1056, true));
+
+		this->tiles.push_back(new tile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/TILES/FLOOR.png", 0, 960, true));
+		this->tiles.push_back(new tile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 992, true));
+		this->tiles.push_back(new tile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 1024, true));
+		this->tiles.push_back(new tile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/TILES/GROUND.png", 0, 1056, true));
 }

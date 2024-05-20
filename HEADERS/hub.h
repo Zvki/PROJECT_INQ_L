@@ -20,9 +20,15 @@ public:
 
 	void innithpbar();
 
+	void innitscorebar();
+
 	void updatehpbar();
 
+	void updatescorebar();
+
 	void renderhpbar(sf::RenderTarget& target);
+
+	void renderscorebar(sf::RenderTarget& target);
 
 	size_t getphp();
 
