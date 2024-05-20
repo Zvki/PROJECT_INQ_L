@@ -1,0 +1,14 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\barto\\onedrive\\pulpit\\uni\\pk4\\project_inq_l\\headers\\game.ixx",
+        "ProvidedModule": "game",
+        "ImportedModules": [
+            "anime",
+            "player",
+            "physics",
+            "tile"
+        ],
+        "ImportedHeaderUnits": []
+    }
+}

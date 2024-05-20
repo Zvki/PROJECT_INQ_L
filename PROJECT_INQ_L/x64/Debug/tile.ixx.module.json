@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\tile.ixx.obj",
+            "outputs": [
+                "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\PROJECT_INQ_L\\PROJECT_INQ_L\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\PROJECT_INQ_L\\PROJECT_INQ_L\\x64\\Debug\\tile.ixx.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "tile",
+                    "source-path": "c:\\users\\barto\\onedrive\\pulpit\\uni\\pk4\\project_inq_l\\headers\\tile.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "iostream",
+                    "source-path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\iostream",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
+                }
+            ]
+        }
+    ]
+}

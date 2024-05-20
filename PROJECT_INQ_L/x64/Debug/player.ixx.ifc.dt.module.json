@@ -1,0 +1,14 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\barto\\onedrive\\pulpit\\uni\\pk4\\project_inq_l\\headers\\player.ixx",
+        "ProvidedModule": "player",
+        "ImportedModules": [
+            "anime",
+            "physics"
+        ],
+        "ImportedHeaderUnits": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\iostream"
+        ]
+    }
+}

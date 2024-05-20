@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\physics.ixx.obj",
+            "outputs": [
+                "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\PROJECT_INQ_L\\PROJECT_INQ_L\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\PROJECT_INQ_L\\PROJECT_INQ_L\\x64\\Debug\\physics.ixx.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "physics",
+                    "source-path": "c:\\users\\barto\\onedrive\\pulpit\\uni\\pk4\\project_inq_l\\headers\\physics.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
