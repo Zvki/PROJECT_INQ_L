@@ -8,8 +8,6 @@
 #include <thread>
 
 
-
-
 int main() {
 
 	game game;

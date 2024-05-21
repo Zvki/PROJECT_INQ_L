@@ -8,6 +8,8 @@ class hub {
 private:
 
 	size_t playerhp_;
+	size_t score_;
+	sf::Text scorebar_;
 	sf::Text hpbar_;
 	sf::Font font_;
 	sf::Texture heart_texture;

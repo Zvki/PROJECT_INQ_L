@@ -24,7 +24,7 @@ public:
 
 	bool animeswitch;
 
-	virtual void anime(sf::Sprite s, sf::Sprite p);
+	virtual void animeenemy(sf::Sprite s, sf::Sprite p);
 	virtual void move(sf::Sprite s);
 	virtual void innittexture(std::string s);
 	virtual void innitsprite();

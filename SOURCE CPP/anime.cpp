@@ -15,8 +15,28 @@ anime::~anime()
 
 void anime::updateanime(player& pl)
 {
+	if (this->attack_anime == true) {
+		this->animationTime_ = clock.getElapsedTime();
+		if (animationTime_ < animeDuration)
+		{
+			if (this->animationtimer.getElapsedTime().asMilliseconds() >= 50.f) {
+				this->currentFrame.top = 384.f;
+				this->currentFrame.left += 128.f;
+				if (this->currentFrame.left >= 384.f) {
+					this->currentFrame.left = 0;
+				}
+				this->animationtimer.restart();
+				pl.sprite.setTextureRect(this->currentFrame);
+			}
+		}
+		else
+		{
+				this->attack_anime = false;
+				this->animestate = IDLE;
+		}
+	}
 	//idle
-	if (this->animestate == IDLE) {
+	else if (this->animestate == IDLE) {
 		if (this->animationtimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) {
 			this->currentFrame.top = 0.f;
 			this->currentFrame.left += 128.f;
@@ -55,18 +75,6 @@ void anime::updateanime(player& pl)
 		}
 		pl.sprite.setScale(-2.f, 2.f);
 		pl.sprite.setOrigin(pl.sprite.getGlobalBounds().width / 2.25f, 0.f);
-	}
-	//ATTACK
-	else if (this->animestate == ATTACK_1) {
-		if (this->animationtimer.getElapsedTime().asMilliseconds() >= 50.f || this->getanimeswitch()) {
-			this->currentFrame.top = 384.f;
-			this->currentFrame.left += 128.f;
-			if (this->currentFrame.left >= 384.f) {
-				this->currentFrame.left = 0;
-			}
-			this->animationtimer.restart();
-			pl.sprite.setTextureRect(this->currentFrame);
-		}
 	}
 	else {
 		this->animationtimer.restart();

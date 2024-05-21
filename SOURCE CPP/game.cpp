@@ -45,18 +45,30 @@ void game::innittile()
 	Tile->settiles();
 }
 
-void game::innitmenu()
+void game::innitmenu_background()
 {
 	if (!this->menubg_texture_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/MENU/mbg.png_large")) {
 		std::cout << "ERROR: COULD NOT FIND THE BACKGROUND TEXTURE \n";
 	}
 	this->menubg_sprite_.setTexture(this->menubg_texture_);
+}
 
+void game::innitmenu_font()
+{
 	if (!font_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/FONT/Pixellettersfull-BnJ5.ttf")) {
 		//ERROR
 	}
-
 	this->Menu_[0].setFont(this->font_);
+}
+
+void game::innitmenu()
+{
+	std::thread menu_background(&game::innitmenu_background, this);
+	std::thread menu_font(&game::innitmenu_font, this);
+
+	menu_background.join();
+	menu_font.join();
+	
 	this->Menu_[0].setFillColor(sf::Color::White);
 	this->Menu_[0].setScale(2.f, 2.f);
 	this->Menu_[0].setString("PLAY");
@@ -86,22 +98,24 @@ void game::innitmusic()
 
 game::game()
 {
-	/*this->innitmusic();*/
-	this->innitmenu();
+
 	this->innitbackg();
-	this->innitw();
+	this->innitmenu();
 	this->innitplayer();
-	this->innittile();
 	this->innitenemy();
+	this->innittile();
+	this->innitw();
+
+	/*this->innitmusic();*/
 }
 
 game::~game()
 {
 	delete this->Player;
-}
-
-void game::innitall()
-{
+	delete this->Hub_;
+	delete this->Anime;
+	delete this->Skeleton_;
+	delete this->Tile;
 }
 
 void game::updatecollision()
@@ -128,7 +142,7 @@ void game::updateplayer()
 void game::updateenemy()
 {
 	this->Skeleton_->move(this->Player->sprite);
-	this->Skeleton_->anime(this->Skeleton_->sprite, this->Player->sprite);
+	this->Skeleton_->animeenemy(this->Skeleton_->sprite, this->Player->sprite);
 }
 
 void game::updatemenu()
@@ -178,6 +192,17 @@ void game::update()
 				this->event.key.code == sf::Keyboard::D)) {
 			this->Anime->resetanimetimer();
 		}
+		else if (this->event.type == sf::Event::KeyPressed)
+		{
+			if(this->event.key.code == sf::Keyboard::H)
+			{
+				if(!this->Anime->attack_anime)
+				{
+					this->Anime->attack_anime = true;
+					this->Anime->clock.restart();
+				}
+			}
+		}
 	}
 
 	this->updateenemy();
@@ -194,6 +219,7 @@ void game::renderworld()
 	this->window.draw(this->Tile->tiles[3]->sprite);
 
 	this->Hub_->renderhpbar(this->window);
+	this->Hub_->renderscorebar(this->window);
 }
 
 void game::renderplayer()

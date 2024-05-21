@@ -91,8 +91,4 @@ void physics::updatemove(player& p, anime& a)
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) && canjump) {
 		this->jump();
 	}
-	//ATTACK
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::H)) {
-		a.animestate = ATTACK_1;
-	}
 }

@@ -1,17 +1,21 @@
 ﻿  game.cpp
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(63,77): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(69,77): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
+C:\Users\Bartosz Sośnica\Source\Repos\Zvki\PROJECT_INQ_L\HEADERS\anime.h(15,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
 C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(75,77): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(81,77): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(87,77): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+  PROJECT_INQ_L.cpp
+C:\Users\Bartosz Sośnica\Source\Repos\Zvki\PROJECT_INQ_L\HEADERS\anime.h(15,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+  Generowanie kodu...
   PROJECT_INQ_L.vcxproj -> C:\Users\Bartosz Sośnica\Source\Repos\Zvki\PROJECT_INQ_L\x64\Debug\PROJECT_INQ_L.exe

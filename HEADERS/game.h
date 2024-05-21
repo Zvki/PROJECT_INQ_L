@@ -50,6 +50,8 @@ private:
 	sf::Font font_;
 	sf::Text Menu_[3];
 
+	void innitmenu_background();
+	void innitmenu_font();
 	void innitmenu();
 
 public:

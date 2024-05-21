@@ -1,5 +1,7 @@
 #include "skeleton.h"
 
+#include "anime.h"
+
 void skeleton::srender(sf::RenderTarget& t)
 {
 	t.draw(this->sprite);

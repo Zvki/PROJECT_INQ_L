@@ -11,11 +11,18 @@ class anime {
 private:
 
 	short animestate;
+	sf::Time animationTime_;
+	sf::Time animeDuration = sf::milliseconds(250.f);
 	sf::Clock animationtimer;
+	
+
 	sf::IntRect currentFrame;
 	bool animationswitch;
 
 public:
+
+	bool attack_anime = false;
+	sf::Clock clock;
 
 	friend class player;
 	friend class physics;

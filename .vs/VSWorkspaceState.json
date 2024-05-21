@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SOURCE CPP",
+    "\\x64"
   ],
-  "SelectedNode": "\\PROJECT_INQ_L.sln",
+  "SelectedNode": "\\SOURCE CPP\\game.cpp",
   "PreviewInSolutionExplorer": false
 }

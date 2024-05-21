@@ -16,13 +16,13 @@ void enemy::move(sf::Sprite s)
 	}
 }
 
-void enemy::anime(sf::Sprite s, sf::Sprite p)
+void enemy::animeenemy(sf::Sprite s, sf::Sprite p)
 {
-	//IDLE
+	//ATTACK
 	if(this->lenght <= 500)
 	{
 		if (this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) {
-			this->currentframe.top = 0.f;
+			this->currentframe.top = 256.f;
 			this->currentframe.left += 128.f;
 			if (this->currentframe.left >= 896.f) {
 				this->currentframe.left = 0;
