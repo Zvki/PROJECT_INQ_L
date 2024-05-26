@@ -29,8 +29,7 @@ void game::innitenemy()
 
 void game::innitbackg()
 {
-	if(!this->backgroundtexture_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/BACKGROUND/bg.jpg"))
-	/*if (!this->backgroundtexture_.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/background/1.png"))*/ {
+	if(!this->backgroundtexture_.loadFromFile("TEXTURE/BACKGROUND/bg.jpg")){
 		std::cout << "ERROR: COULD NOT FIND THE BACKGROUND TEXTURE \n";
 	}
 	this->background.setTexture(this->backgroundtexture_);
@@ -47,7 +46,7 @@ void game::innittile()
 
 void game::innitmenu_background()
 {
-	if (!this->menubg_texture_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/MENU/mbg.png_large")) {
+	if (!this->menubg_texture_.loadFromFile("TEXTURE/MENU/mbg.png_large")) {
 		std::cout << "ERROR: COULD NOT FIND THE BACKGROUND TEXTURE \n";
 	}
 	this->menubg_sprite_.setTexture(this->menubg_texture_);
@@ -55,7 +54,7 @@ void game::innitmenu_background()
 
 void game::innitmenu_font()
 {
-	if (!font_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/FONT/Pixellettersfull-BnJ5.ttf")) {
+	if (!font_.loadFromFile("TEXTURE/FONT/Pixellettersfull-BnJ5.ttf")) {
 		//ERROR
 	}
 	this->Menu_[0].setFont(this->font_);
@@ -90,7 +89,7 @@ void game::innitmenu()
 
 void game::innitmusic()
 {
-	if(!this->music_.openFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/MUSIC/main-music.mp3"))
+	if(!this->music_.openFromFile("TEXTURE/MUSIC/main-music.mp3"))
 	{
 		std::cout << "ERROR: COULD NOT FIND THE MUSIC\n";
 	}

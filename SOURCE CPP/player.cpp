@@ -3,10 +3,8 @@
 
 void player::innitTexture()
 {
-		//COMP PATH
-	if(!this->texturesheet.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/FIRE_WIZARD/fire_wiz.png"))
-		//LAPTOP PATH
-	/*if (!this->texturesheet.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/Fire_wizard/fire_wiz.png"))*/ {
+
+	if(!this->texturesheet.loadFromFile("TEXTURE/FIRE_WIZARD/fire_wiz.png")){
 		std::cout << "ERROR: COULD NOT FIND THE PLAYER IDLE TEXTURE \n";
 	}
 

@@ -2,10 +2,7 @@
 
 hub::hub()
 {
-	//COMP PATH
-	if (!this->font_.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/FONT/Pixellettersfull-BnJ5.ttf"))
-		//LAPTOP PATH
-	/*if(!this->font_.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/FONT/Pixellettersfull-BnJ5.ttf"))*/
+	if (!this->font_.loadFromFile("TEXTURE/FONT/Pixellettersfull-BnJ5.ttf"))
 	{
 		//ERROR
 	}
@@ -21,10 +18,7 @@ hub::~hub()
 
 void hub::innithpbar()
 {
-		//COMP PATH
-	if (!this->heart_texture.loadFromFile("C:/Users/Bartosz Soœnica/source/repos/Zvki/PROJECT_INQ_L/TEXTURE/MENU/Transperent/Icon12.png"))
-		//LAPTOP PATH 
-	/*if(!this->heart_texture.loadFromFile("C:/Users/barto/OneDrive/Pulpit/Uni/PK4/PROJECT_INQ_L/TEXTURE/MENU/Transperent/Icon12.png"))*/
+	if (!this->heart_texture.loadFromFile("TEXTURE/MENU/Transperent/Icon12.png"))
 	{
 		//ERROR
 	}
