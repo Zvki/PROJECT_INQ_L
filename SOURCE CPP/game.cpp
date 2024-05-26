@@ -24,7 +24,7 @@ void game::innitplayer()
 void game::innitenemy()
 {
 	this->Skeleton_ = new skeleton();
-	this->Skeleton_->sprite.setPosition(40.f, 930.f);
+	this->Skeleton_->sprite.setPosition(-400, 960);
 }
 
 void game::innitbackg()
@@ -97,12 +97,7 @@ void game::innitmusic()
 
 game::game()
 {
-
-	this->innitbackg();
 	this->innitmenu();
-	this->innitplayer();
-	this->innitenemy();
-	this->innittile();
 	this->innitw();
 
 	/*this->innitmusic();*/
@@ -117,6 +112,28 @@ game::~game()
 	delete this->Tile;
 }
 
+void game::gamestart()
+{
+	if(this->Hub_->getphp() > 0)
+	{
+		this->render();
+		this->update();
+	}else
+	{
+		this->rendermenu();
+		this->updatemenu();
+	}
+
+}
+
+void game::newgame()
+{
+	this->innitbackg();
+	this->innitplayer();
+	this->innitenemy();
+	this->innittile();
+}
+
 void game::updatecollision()
 {
 	//Collision bottom
@@ -125,6 +142,16 @@ void game::updatecollision()
 		this->Player->setCanJump(true, *Physics);
 		this->Physics->resetvelocityY();
 		this->Player->setPosition(this->Player->getposition().x, this->window.getSize().y - this->Player->getglobalbounds().height - 120);
+	}
+
+	if(this->Player->getposition().x < -80.f)
+	{
+		this->Player->setPosition(-80.f, this->Player->getposition().y);
+	}
+
+	if (this->Player->getposition().x > 1780.f)
+	{
+		this->Player->setPosition(1780.f, this->Player->getposition().y);
 	}
 
 	if (this->Skeleton_->sprite.getPosition().y + this->Skeleton_->sprite.getGlobalBounds().height >= this->window.getSize().y - 120)
@@ -136,11 +163,16 @@ void game::updatecollision()
 void game::updateplayer()
 {
 	this->Player->update(*Physics, *Anime);
+	if(this->Skeleton_->attack_cond)
+	{
+		this->Hub_->updatehpbar();
+	}
 }
 
 void game::updateenemy()
 {
 	this->Skeleton_->move(this->Player->sprite);
+	this->Skeleton_->death(*Player, *Hub_, *Anime);
 	this->Skeleton_->animeenemy(this->Skeleton_->sprite, this->Player->sprite);
 }
 
@@ -156,9 +188,9 @@ void game::updatemenu()
 		else if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter) {
 			switch (this->GetPressedItem()) {
 			case 0: {
+				this->newgame();
 				while (this->getWindow().isOpen()) {
-					this->update();
-					this->render();
+					this->gamestart();
 				}
 				break;
 			}

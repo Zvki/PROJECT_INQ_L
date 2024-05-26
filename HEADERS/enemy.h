@@ -22,6 +22,7 @@ public:
 	float lenght;
 	float speed = 3.f;
 
+	bool attack_cond = false;
 	bool animeswitch;
 
 	virtual void animeenemy(sf::Sprite s, sf::Sprite p);

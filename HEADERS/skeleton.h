@@ -8,6 +8,7 @@
 #include <iostream>
 #include "enemy.h"
 #include "anime.h"
+#include "hub.h"
 
 class skeleton : public enemy
 {
@@ -15,6 +16,8 @@ public:
 
 	void srender(sf::RenderTarget& target);
 	void physics();
+
+	void death(player& p, hub& h, anime& a);
 
 	skeleton();
 	~skeleton();

@@ -32,6 +32,8 @@ public:
 
 	void renderscorebar(sf::RenderTarget& target);
 
+	void setscore(size_t addition);
+
 	size_t getphp();
 
 };

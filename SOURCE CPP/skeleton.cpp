@@ -1,7 +1,5 @@
 #include "skeleton.h"
 
-#include "anime.h"
-
 void skeleton::srender(sf::RenderTarget& t)
 {
 	t.draw(this->sprite);
@@ -9,6 +7,15 @@ void skeleton::srender(sf::RenderTarget& t)
 
 void skeleton::physics()
 {
+}
+
+void skeleton::death(player& p, hub& h, anime& a)
+{
+	if (abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 120 && a.attack_anime)
+	{
+		h.setscore(100);
+		this->sprite.setPosition(-400, 960);
+	}
 }
 
 skeleton::skeleton()

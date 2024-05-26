@@ -63,6 +63,9 @@ public:
 
 	void innitall();
 
+	void gamestart();
+	void newgame();
+
 	//UPDATE SECTION
 	void updatecollision();
 	void updateplayer();

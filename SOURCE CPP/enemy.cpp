@@ -3,14 +3,15 @@
 void enemy::move(sf::Sprite s)
 {
 	this->direction.x = s.getPosition().x - this->sprite.getPosition().x;
-	this->direction.y = s.getPosition().y - this->sprite.getPosition().y + 500;
-	this->lenght = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+	this->direction.y = 960.f;
+	this->lenght = sqrt(this->direction.x * this->direction.x);
+
 	if (lenght != 0)
 	{
 		direction /= lenght;
 	}
 
-	if(this->lenght >= 500)
+	if(this->lenght >= 80)
 	{
 		this->sprite.move(this->direction * this->speed);
 	}
@@ -19,20 +20,22 @@ void enemy::move(sf::Sprite s)
 void enemy::animeenemy(sf::Sprite s, sf::Sprite p)
 {
 	//ATTACK
-	if(this->lenght <= 500)
+	if(this->lenght <= 80)
 	{
+		this->attack_cond = false;
 		if (this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) {
 			this->currentframe.top = 256.f;
 			this->currentframe.left += 128.f;
 			if (this->currentframe.left >= 896.f) {
 				this->currentframe.left = 0;
 			}
+			this->attack_cond = true;
 			this->animetimer.restart();
 			this->sprite.setTextureRect(this->currentframe);
 		}
 	}
 	//MOVING RIGHT
-	else if(p.getPosition().x > s.getPosition().x && this->lenght > 500)
+	else if(p.getPosition().x > s.getPosition().x && this->lenght > 80)
 	{
 		if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 			this->currentframe.top = 128.f;
@@ -47,7 +50,7 @@ void enemy::animeenemy(sf::Sprite s, sf::Sprite p)
 		this->sprite.setOrigin(0.f, 0.f);
 	}
 	//MOVING LEFT
-	else if(p.getPosition().x < s.getPosition().x && this->lenght > 500)
+	else if(p.getPosition().x < s.getPosition().x && this->lenght > 80)
 	{
 		if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 			this->currentframe.top = 128.f;

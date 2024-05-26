@@ -1,5 +1,7 @@
 #include "hub.h"
 
+#include "skeleton.h"
+
 hub::hub()
 {
 	if (!this->font_.loadFromFile("TEXTURE/FONT/Pixellettersfull-BnJ5.ttf"))
@@ -45,8 +47,9 @@ void hub::innitscorebar()
 
 void hub::updatehpbar()
 {
+		this->playerhp_ -= 10;
+		this->hpbar_.setString(std::to_string(this->playerhp_));
 }
-
 void hub::updatescorebar()
 {
 }
@@ -60,6 +63,12 @@ void hub::renderhpbar(sf::RenderTarget& target)
 void hub::renderscorebar(sf::RenderTarget& target)
 {
 	target.draw(this->scorebar_);
+}
+
+void hub::setscore(size_t addition)
+{
+	this->score_ += addition;
+	this->scorebar_.setString("SCORE: " + std::to_string(this->score_));
 }
 
 size_t hub::getphp()
