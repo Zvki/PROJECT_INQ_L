@@ -120,6 +120,7 @@ void game::gamestart()
 		this->update();
 	}else
 	{
+		this->Hub_->savescore();
 		this->rendermenu();
 		this->updatemenu();
 	}

@@ -1,6 +1,7 @@
 #pragma once
 
-#include "SFML/Graphics.hpp" 
+#include "SFML/Graphics.hpp"
+#include <filesystem>
 
 
 class hub {
@@ -34,6 +35,9 @@ public:
 
 	void setscore(size_t addition);
 
+	void savescore();
+
 	size_t getphp();
+
 
 };

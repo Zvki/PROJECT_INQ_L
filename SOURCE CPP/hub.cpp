@@ -1,6 +1,11 @@
 #include "hub.h"
-
 #include "skeleton.h"
+
+#include <filesystem>
+#include <iostream>
+#include <fstream>
+
+
 
 hub::hub()
 {
@@ -69,6 +74,35 @@ void hub::setscore(size_t addition)
 {
 	this->score_ += addition;
 	this->scorebar_.setString("SCORE: " + std::to_string(this->score_));
+}
+
+void hub::savescore()
+{
+	std::filesystem::create_directory("/SCORE");
+	std::filesystem::path score_path("SCORE/SCORE.txt");
+
+	if(this->score_ > 0)
+	{
+		if(!std::filesystem::exists(score_path))
+		{
+			std::ofstream score_txt(score_path);
+			if(score_txt)
+			{
+				score_txt << std::to_string(score_) << "\n";
+				score_txt.close();
+			}
+		}else
+		{
+			std::ofstream score_txt_exist(score_path, std::ofstream::app);
+			if (score_txt_exist)
+			{
+				score_txt_exist << std::to_string(score_) << "\n";
+				score_txt_exist.close();
+			}
+		}
+	}
+
+	
 }
 
 size_t hub::getphp()
