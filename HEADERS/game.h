@@ -53,6 +53,7 @@ private:
 	void innitmenu_background();
 	void innitmenu_font();
 	void innitmenu();
+	void innitplayernickname();
 
 public:
 
@@ -66,8 +67,11 @@ public:
 	void gamestart();
 	void newgame();
 
+	void setnickname();
+
 	//UPDATE SECTION
 	void updatecollision();
+	void updateplayernickname();
 	void updateplayer();
 	void updateenemy();
 	void updatemenu();

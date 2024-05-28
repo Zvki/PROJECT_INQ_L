@@ -18,12 +18,18 @@ private:
 
 public:
 
+	bool nicknameset;
+	sf::Text player_nickname_;
+	std::string input_player_nickname;
+
 	hub();
 	~hub();
 
 	void innithpbar();
 
 	void innitscorebar();
+
+	void innitplayernickname();
 
 	void updatehpbar();
 

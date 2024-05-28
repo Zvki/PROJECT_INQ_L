@@ -15,8 +15,10 @@ hub::hub()
 	}
 	this->score_ = 0;
 	this->playerhp_ = 100;
+	this->player_nickname_.setString("");
 	innithpbar();
 	innitscorebar();
+	innitplayernickname();
 }
 
 hub::~hub()
@@ -50,6 +52,14 @@ void hub::innitscorebar()
 	this->scorebar_.setPosition(1600, 50);
 }
 
+void hub::innitplayernickname()
+{
+	this->player_nickname_.setFont(this->font_);
+	this->player_nickname_.setCharacterSize(24);
+	this->player_nickname_.setFillColor(sf::Color::White);
+	this->player_nickname_.setPosition(1920/2, 1080/2);
+}
+
 void hub::updatehpbar()
 {
 		this->playerhp_ -= 10;
@@ -78,32 +88,33 @@ void hub::setscore(size_t addition)
 
 void hub::savescore()
 {
-	std::filesystem::create_directory("/SCORE");
 	std::filesystem::path score_path("SCORE/SCORE.txt");
 
-	if(this->score_ > 0)
+	if (this->score_ > 0)
 	{
-		if(!std::filesystem::exists(score_path))
+
+		if (!std::filesystem::exists(score_path.parent_path()))
 		{
-			std::ofstream score_txt(score_path);
-			if(score_txt)
+
+			if (!std::filesystem::create_directory(score_path.parent_path()))
 			{
-				score_txt << std::to_string(score_) << "\n";
-				score_txt.close();
-			}
-		}else
-		{
-			std::ofstream score_txt_exist(score_path, std::ofstream::app);
-			if (score_txt_exist)
-			{
-				score_txt_exist << std::to_string(score_) << "\n";
-				score_txt_exist.close();
+				std::cerr << "Nie mo¿na utworzyæ katalogu SCORE!" << std::endl;
+				return;
 			}
 		}
-	}
 
-	
+		std::ofstream score_txt(score_path, std::ofstream::app);
+		if (score_txt)
+		{
+			score_txt << std::to_string(this->score_) << "\n";
+		}
+		else
+		{
+			std::cerr << "Nie mo¿na otworzyæ pliku SCORE.txt!" << std::endl;
+		}
+	}
 }
+
 
 size_t hub::getphp()
 {

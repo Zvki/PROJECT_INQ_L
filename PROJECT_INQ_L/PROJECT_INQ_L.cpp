@@ -7,7 +7,6 @@ int main() {
 	game game;
 
 	while (game.getWindow().isOpen()) {
-		game.rendermenu();
 		game.updatemenu();
 	}
 

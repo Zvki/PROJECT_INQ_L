@@ -9,7 +9,7 @@
 
 void game::innitw()
 {
-	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar | sf::Style::Fullscreen);
+	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar );
 	this->window.setFramerateLimit(60);
 }
 
@@ -87,6 +87,13 @@ void game::innitmenu()
 
 }
 
+void game::innitplayernickname()
+{
+	this->window.clear();
+	this->window.draw(this->Hub_->player_nickname_);
+	this->window.display();
+}
+
 void game::innitmusic()
 {
 	if(!this->music_.openFromFile("TEXTURE/MUSIC/main-music.mp3"))
@@ -114,14 +121,13 @@ game::~game()
 
 void game::gamestart()
 {
-	if(this->Hub_->getphp() > 0)
+	if(this->Hub_->getphp() > 0 && this->Hub_->nicknameset == true)
 	{
-		this->render();
 		this->update();
-	}else
+	}
+	else
 	{
 		this->Hub_->savescore();
-		this->rendermenu();
 		this->updatemenu();
 	}
 
@@ -161,6 +167,38 @@ void game::updatecollision()
 	}
 }
 
+void game::updateplayernickname()
+{
+	while (this->window.pollEvent(this->event))
+	{
+		if (event.type == sf::Event::TextEntered)
+		{
+			if (event.text.unicode < 128)
+			{
+				if (event.text.unicode == '\b')
+				{
+					if (!this->Hub_->input_player_nickname.empty())
+					{
+						this->Hub_->input_player_nickname.pop_back();
+					}
+				}
+				else
+				{
+					this->Hub_->input_player_nickname += static_cast<char>(event.text.unicode);
+				}
+				this->Hub_->player_nickname_.setString(this->Hub_->input_player_nickname);
+			}
+		}
+		if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter)
+		{
+			this->Hub_->nicknameset = true;
+			this->gamestart();
+			break;
+		}
+	}
+	this->innitplayernickname();
+}
+
 void game::updateplayer()
 {
 	this->Player->update(*Physics, *Anime);
@@ -191,7 +229,8 @@ void game::updatemenu()
 			case 0: {
 				this->newgame();
 				while (this->getWindow().isOpen()) {
-					this->gamestart();
+					this->Hub_->nicknameset = false;
+					this->updateplayernickname();
 				}
 				break;
 			}
@@ -205,6 +244,7 @@ void game::updatemenu()
 			}
 		}
 	}
+	this->rendermenu();
 }
 
 void game::update()
@@ -237,6 +277,7 @@ void game::update()
 		}
 	}
 
+	this->render();
 	this->updateenemy();
 	this->updateplayer();
 	this->updatecollision();
