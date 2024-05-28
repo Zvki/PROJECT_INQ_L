@@ -192,7 +192,10 @@ void game::updateplayernickname()
 		if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter)
 		{
 			this->Hub_->nicknameset = true;
-			this->gamestart();
+			while(this->window.isOpen())
+			{
+				this->gamestart();
+			}
 			break;
 		}
 	}
