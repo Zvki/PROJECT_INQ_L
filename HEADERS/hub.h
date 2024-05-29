@@ -18,6 +18,7 @@ private:
 
 public:
 
+	bool score_saved = false;
 	bool nicknameset;
 	sf::Text player_nickname_;
 	std::string input_player_nickname;

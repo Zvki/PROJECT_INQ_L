@@ -127,7 +127,11 @@ void game::gamestart()
 	}
 	else
 	{
-		this->Hub_->savescore();
+		if(!this->Hub_->score_saved == true)
+		{
+			this->Hub_->savescore();
+		}
+
 		this->updatemenu();
 	}
 
@@ -192,6 +196,7 @@ void game::updateplayernickname()
 		if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter)
 		{
 			this->Hub_->nicknameset = true;
+			this->Hub_->score_saved = false;
 			while(this->window.isOpen())
 			{
 				this->gamestart();
