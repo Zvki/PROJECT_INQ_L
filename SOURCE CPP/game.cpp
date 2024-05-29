@@ -9,7 +9,7 @@
 
 void game::innitw()
 {
-	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar );
+	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar | sf::Style::Fullscreen);
 	this->window.setFramerateLimit(60);
 }
 

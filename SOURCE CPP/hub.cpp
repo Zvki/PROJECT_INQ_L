@@ -87,30 +87,36 @@ void hub::setscore(size_t addition)
 }
 
 void hub::savescore()
-{
-	std::filesystem::path score_path("SCORE/SCORE.txt");
+{	
+	std::filesystem::path score_path("SCORE/" + input_player_nickname + ".txt");
 
 	if (this->score_ > 0)
 	{
-
-		if (!std::filesystem::exists(score_path.parent_path()))
+		// Sprawdzanie, czy katalog SCORE istnieje
+		if (!std::filesystem::exists(score_path))
 		{
-
-			if (!std::filesystem::create_directory(score_path.parent_path()))
+			// Próba utworzenia katalogu SCORE
+			if (!std::filesystem::create_directory(score_path))
 			{
 				std::cerr << "Nie mo¿na utworzyæ katalogu SCORE!" << std::endl;
 				return;
 			}
 		}
+		else if (!std::filesystem::is_directory(score_path))
+		{
+			std::cerr << "Œcie¿ka SCORE nie jest katalogiem!" << std::endl;
+			return;
+		}
 
-		std::ofstream score_txt(score_path, std::ofstream::app);
+		// Otwarcie pliku w trybie dodawania
+		std::ofstream score_txt(score_path);
 		if (score_txt)
 		{
 			score_txt << std::to_string(this->score_) << "\n";
 		}
 		else
 		{
-			std::cerr << "Nie mo¿na otworzyæ pliku SCORE.txt!" << std::endl;
+			std::cerr << "Nie mo¿na otworzyæ pliku " << score_path << "!" << std::endl;
 		}
 	}
 }
