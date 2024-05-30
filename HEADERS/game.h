@@ -6,6 +6,7 @@
 #include "tile.h"
 #include "skeleton.h"
 #include "hub.h"
+#include "EnemyManager.h"
 #include "SFML/Audio.hpp"
 #include "SFML/Graphics.hpp"
 #include "SFML/System.hpp"
@@ -28,10 +29,10 @@ private:
 
 	//PLAYER&ENTITY SECTION
 	hub* Hub_;
+	EnemyManager* enemy_manager_;
 	player* Player;
 	physics* Physics;
 	anime* Anime;
-	skeleton* Skeleton_;
 
 	void innitplayer();
 	void innitenemy();

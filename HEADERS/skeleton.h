@@ -17,8 +17,6 @@ public:
 	void srender(sf::RenderTarget& target);
 	void physics();
 
-	void death(player& p, hub& h, anime& a);
-
 	skeleton();
 	~skeleton();
 };

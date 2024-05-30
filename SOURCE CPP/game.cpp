@@ -21,12 +21,6 @@ void game::innitplayer()
 	this->Player->setPosition(760.f, 960.f);
 }
 
-void game::innitenemy()
-{
-	this->Skeleton_ = new skeleton();
-	this->Skeleton_->sprite.setPosition(-400, 960);
-}
-
 void game::innitbackg()
 {
 	if(!this->backgroundtexture_.loadFromFile("TEXTURE/BACKGROUND/bg.jpg")){
@@ -106,6 +100,7 @@ game::game()
 {
 	this->innitmenu();
 	this->innitw();
+	this->enemy_manager_ = new EnemyManager;
 
 	/*this->innitmusic();*/
 }
@@ -115,7 +110,6 @@ game::~game()
 	delete this->Player;
 	delete this->Hub_;
 	delete this->Anime;
-	delete this->Skeleton_;
 	delete this->Tile;
 }
 
@@ -165,10 +159,6 @@ void game::updatecollision()
 		this->Player->setPosition(1780.f, this->Player->getposition().y);
 	}
 
-	if (this->Skeleton_->sprite.getPosition().y + this->Skeleton_->sprite.getGlobalBounds().height >= this->window.getSize().y - 120)
-	{
-		this->Skeleton_->sprite.setPosition(this->Skeleton_->sprite.getPosition().x, this->window.getSize().y - this->Skeleton_->sprite.getGlobalBounds().height - 120);
-	}
 }
 
 void game::updateplayernickname()
@@ -218,9 +208,7 @@ void game::updateplayer()
 
 void game::updateenemy()
 {
-	this->Skeleton_->move(this->Player->sprite);
-	this->Skeleton_->death(*Player, *Hub_, *Anime);
-	this->Skeleton_->animeenemy(this->Skeleton_->sprite, this->Player->sprite);
+
 }
 
 void game::updatemenu()

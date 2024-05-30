@@ -139,6 +139,7 @@
     <ClCompile Include="..\HEADERS\tile.cpp" />
     <ClCompile Include="..\SOURCE CPP\anime.cpp" />
     <ClCompile Include="..\SOURCE CPP\enemy.cpp" />
+    <ClCompile Include="..\SOURCE CPP\EnemyManager.cpp" />
     <ClCompile Include="..\SOURCE CPP\game.cpp" />
     <ClCompile Include="..\SOURCE CPP\hub.cpp" />
     <ClCompile Include="..\SOURCE CPP\physics.cpp" />
@@ -149,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="..\HEADERS\anime.h" />
     <ClInclude Include="..\HEADERS\enemy.h" />
+    <ClInclude Include="..\HEADERS\EnemyManager.h" />
     <ClInclude Include="..\HEADERS\game.h" />
     <ClInclude Include="..\HEADERS\hub.h" />
     <ClInclude Include="..\HEADERS\physics.h" />

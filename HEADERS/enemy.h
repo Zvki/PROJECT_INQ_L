@@ -7,6 +7,9 @@
 #include "SFML/Network.hpp"
 #include <iostream>
 
+#include "anime.h"
+#include "hub.h"
+
 class enemy
 {
 public:
@@ -24,6 +27,8 @@ public:
 
 	bool attack_cond = false;
 	bool animeswitch;
+
+	void death(player& p, hub& h, anime& a);
 
 	virtual void animeenemy(sf::Sprite s, sf::Sprite p);
 	virtual void move(sf::Sprite s);

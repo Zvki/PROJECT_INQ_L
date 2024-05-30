@@ -57,7 +57,7 @@ void hub::innitplayernickname()
 	this->player_nickname_.setFont(this->font_);
 	this->player_nickname_.setCharacterSize(60);
 	this->player_nickname_.setFillColor(sf::Color::White);
-	this->player_nickname_.setPosition(1920/2, 1080/2);
+	this->player_nickname_.setPosition(1920/2 - 60, 1080/2);
 }
 
 void hub::updatehpbar()

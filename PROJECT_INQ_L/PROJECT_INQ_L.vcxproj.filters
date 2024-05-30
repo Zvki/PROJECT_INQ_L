@@ -42,6 +42,9 @@
     <ClCompile Include="..\SOURCE CPP\hub.cpp">
       <Filter>Pliki zasobów</Filter>
     </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\EnemyManager.cpp">
+      <Filter>Pliki zasobów</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\HEADERS\anime.h">
@@ -66,6 +69,9 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\hub.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\EnemyManager.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>

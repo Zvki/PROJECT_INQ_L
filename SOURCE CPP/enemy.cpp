@@ -17,6 +17,17 @@ void enemy::move(sf::Sprite s)
 	}
 }
 
+void enemy::death(player& p, hub& h, anime& a)
+{
+
+	if (abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 120 && a.attack_anime)
+	{
+		h.setscore(100);
+		this->sprite.setPosition(-400, 960);
+	}
+
+}
+
 void enemy::animeenemy(sf::Sprite s, sf::Sprite p)
 {
 	//ATTACK
