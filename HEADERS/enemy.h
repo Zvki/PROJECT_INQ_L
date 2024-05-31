@@ -6,6 +6,7 @@
 #include "SFML/Window.hpp"
 #include "SFML/Network.hpp"
 #include <iostream>
+#include <random>
 
 #include "anime.h"
 #include "hub.h"
@@ -27,10 +28,14 @@ public:
 
 	bool attack_cond = false;
 	bool animeswitch;
+	bool isAlive;
 
-	void death(player& p, hub& h, anime& a);
+	bool death_condition(player& p, hub& h, anime& a);
+	void attack(player& p, hub& h);
+	void makealive();
+	int set_position_x();
 
-	virtual void animeenemy(sf::Sprite s, sf::Sprite p);
+	virtual void animeenemy(sf::Sprite s, sf::Sprite p, hub& h);
 	virtual void move(sf::Sprite s);
 	virtual void innittexture(std::string s);
 	virtual void innitsprite();

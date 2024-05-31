@@ -3,64 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\hub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\hub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\skeleton.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\skeleton.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\hub.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\hub.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\PROJECT_INQ_L\\PROJECT_INQ_L.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:PROJECT_INQ_L\\PROJECT_INQ_L.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\anime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\anime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\skeleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\skeleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\physics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\physics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\physics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\physics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\anime.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\anime.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\hub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\hub.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\skeleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\skeleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\physics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\physics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\hub.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\hub.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\physics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\physics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\PROJECT_INQ_L\\PROJECT_INQ_L.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:PROJECT_INQ_L\\PROJECT_INQ_L.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\anime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:SOURCE CPP\\anime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\anime.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|solutionrelative:HEADERS\\anime.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E1762E7-550D-41C2-ACB5-8E9DB0FD98FA}|PROJECT_INQ_L\\PROJECT_INQ_L.vcxproj|C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -77,35 +85,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "skeleton.cpp",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\skeleton.cpp",
-              "RelativeDocumentMoniker": "SOURCE CPP\\skeleton.cpp",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\skeleton.cpp",
-              "RelativeToolTip": "SOURCE CPP\\skeleton.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T11:47:08.219Z"
+              "DocumentIndex": 3,
+              "Title": "enemy.h",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\enemy.h",
+              "RelativeDocumentMoniker": "HEADERS\\enemy.h",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\enemy.h",
+              "RelativeToolTip": "HEADERS\\enemy.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T11:47:08.433Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "player.cpp",
               "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\player.cpp",
               "RelativeDocumentMoniker": "SOURCE CPP\\player.cpp",
               "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\player.cpp",
               "RelativeToolTip": "SOURCE CPP\\player.cpp",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAAAYAAAAmAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T11:47:08.428Z"
+              "WhenOpened": "2024-05-26T11:47:08.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "skeleton.cpp",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\skeleton.cpp",
+              "RelativeDocumentMoniker": "SOURCE CPP\\skeleton.cpp",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\skeleton.cpp",
+              "RelativeToolTip": "SOURCE CPP\\skeleton.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-26T11:47:08.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "hub.cpp",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\hub.cpp",
+              "RelativeDocumentMoniker": "SOURCE CPP\\hub.cpp",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\hub.cpp",
+              "RelativeToolTip": "SOURCE CPP\\hub.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-26T11:47:08.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "skeleton.h",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\skeleton.h",
+              "RelativeDocumentMoniker": "HEADERS\\skeleton.h",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\skeleton.h",
+              "RelativeToolTip": "HEADERS\\skeleton.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T11:47:08.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "enemy.cpp",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\enemy.cpp",
+              "RelativeDocumentMoniker": "SOURCE CPP\\enemy.cpp",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\enemy.cpp",
+              "RelativeToolTip": "SOURCE CPP\\enemy.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEYAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-26T11:47:08.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "physics.cpp",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\physics.cpp",
+              "RelativeDocumentMoniker": "SOURCE CPP\\physics.cpp",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\physics.cpp",
+              "RelativeToolTip": "SOURCE CPP\\physics.cpp",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAAF0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-26T11:47:08.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "game.cpp",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\game.cpp",
+              "RelativeDocumentMoniker": "SOURCE CPP\\game.cpp",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\game.cpp",
+              "RelativeToolTip": "SOURCE CPP\\game.cpp",
+              "ViewState": "AQIAABEBAAAAAAAAAAAAADkBAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-26T11:47:08.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "hub.h",
               "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\hub.h",
               "RelativeDocumentMoniker": "HEADERS\\hub.h",
@@ -113,49 +201,51 @@
               "RelativeToolTip": "HEADERS\\hub.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-26T11:47:08.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "hub.cpp",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\hub.cpp",
-              "RelativeDocumentMoniker": "SOURCE CPP\\hub.cpp",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\hub.cpp",
-              "RelativeToolTip": "SOURCE CPP\\hub.cpp",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAAAGIAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T11:47:08.431Z",
+              "WhenOpened": "2024-05-26T11:47:08.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "game.cpp",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\game.cpp",
-              "RelativeDocumentMoniker": "SOURCE CPP\\game.cpp",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\game.cpp",
-              "RelativeToolTip": "SOURCE CPP\\game.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T11:47:08.432Z",
+              "DocumentIndex": 11,
+              "Title": "player.h",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\player.h",
+              "RelativeDocumentMoniker": "HEADERS\\player.h",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\player.h",
+              "RelativeToolTip": "HEADERS\\player.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T11:47:08.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "physics.h",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\physics.h",
+              "RelativeDocumentMoniker": "HEADERS\\physics.h",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\physics.h",
+              "RelativeToolTip": "HEADERS\\physics.h",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T11:47:08.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "enemy.h",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\enemy.h",
-              "RelativeDocumentMoniker": "HEADERS\\enemy.h",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\enemy.h",
-              "RelativeToolTip": "HEADERS\\enemy.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAaAAAA",
+              "Title": "game.h",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\game.h",
+              "RelativeDocumentMoniker": "HEADERS\\game.h",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\game.h",
+              "RelativeToolTip": "HEADERS\\game.h",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-26T11:47:08.433Z"
+              "WhenOpened": "2024-05-26T11:47:08.435Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "anime.h",
               "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\anime.h",
               "RelativeDocumentMoniker": "HEADERS\\anime.h",
@@ -167,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "PROJECT_INQ_L.cpp",
               "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\PROJECT_INQ_L\\PROJECT_INQ_L.cpp",
               "RelativeDocumentMoniker": "PROJECT_INQ_L\\PROJECT_INQ_L.cpp",
@@ -179,31 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "player.h",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\player.h",
-              "RelativeDocumentMoniker": "HEADERS\\player.h",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\player.h",
-              "RelativeToolTip": "HEADERS\\player.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAkAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-26T11:47:08.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "physics.cpp",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\physics.cpp",
-              "RelativeDocumentMoniker": "SOURCE CPP\\physics.cpp",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\physics.cpp",
-              "RelativeToolTip": "SOURCE CPP\\physics.cpp",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAAF0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T11:47:08.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "anime.cpp",
               "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\anime.cpp",
               "RelativeDocumentMoniker": "SOURCE CPP\\anime.cpp",
@@ -215,55 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "enemy.cpp",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\enemy.cpp",
-              "RelativeDocumentMoniker": "SOURCE CPP\\enemy.cpp",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\enemy.cpp",
-              "RelativeToolTip": "SOURCE CPP\\enemy.cpp",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAACYAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-26T11:47:08.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "physics.h",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\physics.h",
-              "RelativeDocumentMoniker": "HEADERS\\physics.h",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\physics.h",
-              "RelativeToolTip": "HEADERS\\physics.h",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-26T11:47:08.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "game.h",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\game.h",
-              "RelativeDocumentMoniker": "HEADERS\\game.h",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\game.h",
-              "RelativeToolTip": "HEADERS\\game.h",
-              "ViewState": "AQIAADcAAAAAAAAAAAAAAEIAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-26T11:47:08.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "skeleton.h",
-              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\skeleton.h",
-              "RelativeDocumentMoniker": "HEADERS\\skeleton.h",
-              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\skeleton.h",
-              "RelativeToolTip": "HEADERS\\skeleton.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-26T11:47:08.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "tile.cpp",
               "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\tile.cpp",
               "RelativeDocumentMoniker": "HEADERS\\tile.cpp",
@@ -275,13 +293,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "thread",
               "DocumentMoniker": "D:\\VS Code 2022\\Main\\VC\\Tools\\MSVC\\14.34.31933\\include\\thread",
               "ToolTip": "D:\\VS Code 2022\\Main\\VC\\Tools\\MSVC\\14.34.31933\\include\\thread",
               "ViewState": "AQIAADAAAAAAAAAAAAAAADYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-21T19:05:03.817Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyManager.cpp",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\EnemyManager.cpp",
+              "RelativeDocumentMoniker": "SOURCE CPP\\EnemyManager.cpp",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\SOURCE CPP\\EnemyManager.cpp",
+              "RelativeToolTip": "SOURCE CPP\\EnemyManager.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-30T20:15:06.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EnemyManager.h",
+              "DocumentMoniker": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\EnemyManager.h",
+              "RelativeDocumentMoniker": "HEADERS\\EnemyManager.h",
+              "ToolTip": "C:\\Users\\barto\\OneDrive\\Pulpit\\Uni\\PK4\\GITHUB\\PROJECT_INQ_L\\HEADERS\\EnemyManager.h",
+              "RelativeToolTip": "HEADERS\\EnemyManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-30T20:15:04.339Z",
+              "EditorCaption": ""
             }
           ]
         }

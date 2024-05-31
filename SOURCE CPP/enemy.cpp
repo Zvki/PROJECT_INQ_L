@@ -17,30 +17,78 @@ void enemy::move(sf::Sprite s)
 	}
 }
 
-void enemy::death(player& p, hub& h, anime& a)
+bool enemy::death_condition(player& p, hub& h, anime& a)
 {
-
-	if (abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 120 && a.attack_anime)
-	{
-		h.setscore(100);
-		this->sprite.setPosition(-400, 960);
-	}
-
+		if (abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 120 && a.attack_anime)
+		{
+			h.setscore(100);
+			this->isAlive = false;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 }
 
-void enemy::animeenemy(sf::Sprite s, sf::Sprite p)
+void enemy::attack(player& p, hub& h)
+{
+	if (std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 100 && this->attack_cond)
+	{
+
+	}
+}
+
+void enemy::makealive()
+{
+	this->isAlive = true;
+}
+
+int enemy::set_position_x()
+{
+
+	std::random_device rd;
+	std::mt19937 gen(rd());
+
+	// Definiowanie dystrybucji dla wyboru zakresu (0 lub 1)
+	std::uniform_int_distribution<> range_choice(0, 1);
+
+	// Definiowanie dystrybucji dla zakresu -100 do 100
+	std::uniform_int_distribution<> distrib1(-100, 100);
+
+	// Definiowanie dystrybucji dla zakresu 2000 do 2100
+	std::uniform_int_distribution<> distrib2(2000, 2100);
+
+	// Wybór zakresu
+	int choice = range_choice(gen);
+
+	// Generowanie liczby losowej w wybranym zakresie
+	int random_number;
+	if (choice == 0) {
+		return distrib1(gen);
+	}
+	else if(choice == 1)
+	{
+		return distrib2(gen);
+	}
+}
+
+void enemy::animeenemy(sf::Sprite s, sf::Sprite p, hub& h)
 {
 	//ATTACK
 	if(this->lenght <= 80)
 	{
-		this->attack_cond = false;
 		if (this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) {
 			this->currentframe.top = 256.f;
 			this->currentframe.left += 128.f;
+			if (this->currentframe.left >= 384.f && this->currentframe.left <= 512.f)
+			{
+				h.updatehpbar();
+			}
 			if (this->currentframe.left >= 896.f) {
 				this->currentframe.left = 0;
 			}
-			this->attack_cond = true;
+
 			this->animetimer.restart();
 			this->sprite.setTextureRect(this->currentframe);
 		}

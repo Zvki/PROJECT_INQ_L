@@ -135,7 +135,6 @@ void game::newgame()
 {
 	this->innitbackg();
 	this->innitplayer();
-	this->innitenemy();
 	this->innittile();
 }
 
@@ -200,15 +199,12 @@ void game::updateplayernickname()
 void game::updateplayer()
 {
 	this->Player->update(*Physics, *Anime);
-	if(this->Skeleton_->attack_cond)
-	{
-		this->Hub_->updatehpbar();
-	}
 }
 
 void game::updateenemy()
 {
-
+	this->enemy_manager_->update_enemy(*Player, *Hub_, *Anime);
+	this->enemy_manager_->check_collision(this->window);
 }
 
 void game::updatemenu()
@@ -296,11 +292,6 @@ void game::renderplayer()
 	this->Player->render(this->window);
 }
 
-void game::renderenemy()
-{
-	this->Skeleton_->srender(this->window);
-}
-
 void game::rendermenu()
 {
 	this->window.clear();
@@ -320,7 +311,7 @@ void game::render()
 
 	this->renderworld();
 
-	this->renderenemy();
+	this->enemy_manager_->render_enemy(this->window);
 
 	this->renderplayer();
 

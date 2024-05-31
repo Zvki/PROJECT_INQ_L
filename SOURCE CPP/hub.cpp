@@ -62,7 +62,7 @@ void hub::innitplayernickname()
 
 void hub::updatehpbar()
 {
-		this->playerhp_ -= 10;
+		this->playerhp_ -= 5;
 		this->hpbar_.setString(std::to_string(this->playerhp_));
 }
 void hub::updatescorebar()
