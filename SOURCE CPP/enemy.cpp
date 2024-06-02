@@ -19,7 +19,7 @@ void enemy::move(sf::Sprite s)
 
 bool enemy::death_condition(player& p, hub& h, anime& a)
 {
-		if (abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 120 && a.attack_anime)
+		if (this->enemy_hp == 0)
 		{
 			h.setscore(100);
 			this->isAlive = false;
@@ -31,11 +31,11 @@ bool enemy::death_condition(player& p, hub& h, anime& a)
 		}
 }
 
-void enemy::attack(player& p, hub& h)
+void enemy::enemy_hp_update(player& p, anime& a)
 {
-	if (std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 100 && this->attack_cond)
+	if(std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && a.attack_anime)
 	{
-
+		this->enemy_hp -= 20;
 	}
 }
 

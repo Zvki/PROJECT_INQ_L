@@ -27,24 +27,17 @@ public:
 	~hub();
 
 	void innithpbar();
-
 	void innitscorebar();
-
 	void innitplayernickname();
-
 	void updatehpbar();
-
 	void updatescorebar();
-
 	void renderhpbar(sf::RenderTarget& target);
-
 	void renderscorebar(sf::RenderTarget& target);
-
 	void setscore(size_t addition);
-
 	void savescore();
 
 	size_t getphp();
+	sf::Font getfont();
 
 
 };

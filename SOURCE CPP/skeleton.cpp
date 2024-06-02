@@ -14,6 +14,7 @@ skeleton::skeleton()
 	this->innittexture("TEXTURE/SKELETON/SKELETON.png");
 	this->innitsprite();
 	this->speed = 3.f;
+	this->enemy_hp = 120;
 	this->makealive();
 	this->sprite.setPosition(this->set_position_x(), 960);
 }

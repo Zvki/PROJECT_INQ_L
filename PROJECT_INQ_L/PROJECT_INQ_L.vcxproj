@@ -145,6 +145,7 @@
     <ClCompile Include="..\SOURCE CPP\physics.cpp" />
     <ClCompile Include="..\SOURCE CPP\player.cpp" />
     <ClCompile Include="..\SOURCE CPP\skeleton.cpp" />
+    <ClCompile Include="..\SOURCE CPP\switchscreens.cpp" />
     <ClCompile Include="PROJECT_INQ_L.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
     <ClInclude Include="..\HEADERS\physics.h" />
     <ClInclude Include="..\HEADERS\player.h" />
     <ClInclude Include="..\HEADERS\skeleton.h" />
+    <ClInclude Include="..\HEADERS\switchscreens.h" />
     <ClInclude Include="..\HEADERS\tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

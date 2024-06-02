@@ -74,7 +74,7 @@ void anime::updateanime(player& pl)
 
 		}
 		pl.sprite.setScale(-2.f, 2.f);
-		pl.sprite.setOrigin(pl.sprite.getGlobalBounds().width / 2.25f, 0.f);
+		pl.sprite.setOrigin(pl.sprite.getGlobalBounds().width / 3.f, 0.f);
 	}
 	else {
 		this->animationtimer.restart();

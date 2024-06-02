@@ -31,6 +31,7 @@ void game::innitbackg()
 	this->Tile = new tile();
 
 	this->Hub_ = new hub();
+	this->SS = new switchscreens();
 }
 
 void game::innittile()
@@ -84,6 +85,7 @@ void game::innitmenu()
 void game::innitplayernickname()
 {
 	this->window.clear();
+	this->window.draw(this->SS->ss_text);
 	this->window.draw(this->Hub_->player_nickname_);
 	this->window.display();
 }
@@ -100,7 +102,6 @@ game::game()
 {
 	this->innitmenu();
 	this->innitw();
-	this->enemy_manager_ = new EnemyManager;
 
 	/*this->innitmusic();*/
 }
@@ -108,31 +109,55 @@ game::game()
 game::~game()
 {
 	delete this->Player;
-	delete this->Hub_;
 	delete this->Anime;
 	delete this->Tile;
 }
 
 void game::gamestart()
 {
-	if(this->Hub_->getphp() > 0 && this->Hub_->nicknameset == true)
+	while(this->window.isOpen())
 	{
-		this->update();
-	}
-	else
-	{
-		if(!this->Hub_->score_saved == true)
+		if (this->Hub_->nicknameset == true)
 		{
-			this->Hub_->savescore();
+			this->update();
+		}
+		else
+		{
+			if (!this->Hub_->score_saved == true)
+			{
+				this->Hub_->savescore();
+			}
+			this->SS->set_you_died();
+			this->you_died();
+		}
+	}
+}
+
+void game::you_died()
+{
+	while(this->window.isOpen())
+	{
+
+		while (this->window.pollEvent(this->event))
+		{
+			if (event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter)
+			{
+				while (this->window.isOpen())
+				{
+					this->updatemenu();
+				}
+			}
 		}
 
-		this->updatemenu();
+		this->window.clear();
+		this->window.draw(this->SS->ss_text);
+		this->window.display();
 	}
-
 }
 
 void game::newgame()
 {
+	this->enemy_manager_ = new EnemyManager;
 	this->innitbackg();
 	this->innitplayer();
 	this->innittile();
@@ -162,38 +187,40 @@ void game::updatecollision()
 
 void game::updateplayernickname()
 {
-	while (this->window.pollEvent(this->event))
-	{
-		if (event.type == sf::Event::TextEntered)
+	while (this->getWindow().isOpen()) {
+		while (this->window.pollEvent(this->event))
 		{
-			if (event.text.unicode < 128)
+			if (event.type == sf::Event::TextEntered)
 			{
-				if (event.text.unicode == '\b')
+				if (event.text.unicode < 128)
 				{
-					if (!this->Hub_->input_player_nickname.empty())
+					if (event.text.unicode == '\b')
 					{
-						this->Hub_->input_player_nickname.pop_back();
+						if (!this->Hub_->input_player_nickname.empty())
+						{
+							this->Hub_->input_player_nickname.pop_back();
+						}
 					}
+					else
+					{
+						this->Hub_->input_player_nickname += static_cast<char>(event.text.unicode);
+					}
+					this->Hub_->player_nickname_.setString(this->Hub_->input_player_nickname);
 				}
-				else
-				{
-					this->Hub_->input_player_nickname += static_cast<char>(event.text.unicode);
-				}
-				this->Hub_->player_nickname_.setString(this->Hub_->input_player_nickname);
 			}
-		}
-		if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter)
-		{
-			this->Hub_->nicknameset = true;
-			this->Hub_->score_saved = false;
-			while(this->window.isOpen())
+			if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter)
 			{
-				this->gamestart();
+				this->Hub_->nicknameset = true;
+				this->Hub_->score_saved = false;
+				while (this->window.isOpen())
+				{
+					this->gamestart();
+				}
+				break;
 			}
-			break;
 		}
+		this->innitplayernickname();
 	}
-	this->innitplayernickname();
 }
 
 void game::updateplayer()
@@ -220,10 +247,7 @@ void game::updatemenu()
 			switch (this->GetPressedItem()) {
 			case 0: {
 				this->newgame();
-				while (this->getWindow().isOpen()) {
-					this->Hub_->nicknameset = false;
 					this->updateplayernickname();
-				}
 				break;
 			}
 			case 1: {
@@ -267,6 +291,11 @@ void game::update()
 				}
 			}
 		}
+	}
+
+	if(this->Hub_->getphp() == 0)
+	{
+		this->Hub_->nicknameset = false;
 	}
 
 	this->render();

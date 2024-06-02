@@ -22,6 +22,8 @@ public:
 	sf::Clock animetimer;
 	sf::Vector2f velocity;
 
+	int enemy_hp;
+
 	float grav;
 	float lenght;
 	float speed = 3.f;
@@ -31,8 +33,10 @@ public:
 	bool isAlive;
 
 	bool death_condition(player& p, hub& h, anime& a);
-	void attack(player& p, hub& h);
+
+	void enemy_hp_update(player& p, anime& a);
 	void makealive();
+
 	int set_position_x();
 
 	virtual void animeenemy(sf::Sprite s, sf::Sprite p, hub& h);

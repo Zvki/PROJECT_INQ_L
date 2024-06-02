@@ -6,6 +6,7 @@
 #include "tile.h"
 #include "skeleton.h"
 #include "hub.h"
+#include "switchscreens.h"
 #include "EnemyManager.h"
 #include "SFML/Audio.hpp"
 #include "SFML/Graphics.hpp"
@@ -28,6 +29,7 @@ private:
 	void innitmusic();
 
 	//PLAYER&ENTITY SECTION
+	switchscreens* SS;
 	hub* Hub_;
 	EnemyManager* enemy_manager_;
 	player* Player;
@@ -66,6 +68,7 @@ public:
 	void innitall();
 
 	void gamestart();
+	void you_died();
 	void newgame();
 
 	void setnickname();

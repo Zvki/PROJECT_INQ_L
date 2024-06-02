@@ -26,7 +26,6 @@ void EnemyManager::check_collision(sf::RenderTarget& window)
 		{
 			enemy->sprite.setPosition(enemy->sprite.getPosition().x, window.getSize().y - enemy->sprite.getGlobalBounds().height - 120);
 		}
-
 	}
 }
 	
@@ -46,6 +45,7 @@ void EnemyManager::update_enemy(player& p, hub& h, anime& a)
 		{
 			enemy->move(p.sprite);
 			enemy->animeenemy(enemy->sprite, p.sprite, h);
+			enemy->enemy_hp_update(p, a);
 			if (enemy->death_condition(p, h, a))
 			{
 				remove_enemy();

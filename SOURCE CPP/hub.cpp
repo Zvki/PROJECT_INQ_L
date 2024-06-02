@@ -130,3 +130,8 @@ size_t hub::getphp()
 {
 	return playerhp_;
 }
+
+sf::Font hub::getfont()
+{
+	return this->font_;
+}
