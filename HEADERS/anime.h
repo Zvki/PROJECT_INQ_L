@@ -22,14 +22,17 @@ private:
 public:
 
 	bool attack_anime = false;
+	sf::Time attack_cooldown = sf::seconds(1.f);
+	sf::Clock attack_clock;
 	sf::Clock clock;
-
 	friend class player;
 	friend class physics;
 
 	anime();
 
 	~anime();
+
+	void setcurrentframe();
 
 	void updateanime(player& pl);
 

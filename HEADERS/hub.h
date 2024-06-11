@@ -4,6 +4,13 @@
 #include <filesystem>
 
 
+struct player_score
+{
+	std::string player_nickname;
+	int score_points;
+};
+
+
 class hub {
 
 private:
@@ -18,8 +25,11 @@ private:
 
 public:
 
-	bool score_saved = false;
+	bool score_saved;
 	bool nicknameset;
+
+	static std::vector<player_score> leaderboard;
+
 	sf::Text player_nickname_;
 	std::string input_player_nickname;
 
@@ -35,6 +45,7 @@ public:
 	void renderscorebar(sf::RenderTarget& target);
 	void setscore(size_t addition);
 	void savescore();
+	void getscore();
 
 	size_t getphp();
 	sf::Font getfont();

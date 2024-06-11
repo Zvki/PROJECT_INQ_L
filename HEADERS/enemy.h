@@ -19,6 +19,7 @@ public:
 	sf::Texture texturesheet;
 	sf::Sprite sprite;
 	sf::IntRect currentframe;
+	sf::IntRect currentframe_death;
 	sf::Clock animetimer;
 	sf::Vector2f velocity;
 
@@ -30,12 +31,15 @@ public:
 
 	bool attack_cond = false;
 	bool animeswitch;
-	bool isAlive;
+	bool animestarted = false;
+	bool isAlive = true;
+	bool isDying = false;
 
-	bool death_condition(player& p, hub& h, anime& a);
+	void death_condition(player& p, hub& h, anime& a);
 
 	void enemy_hp_update(player& p, anime& a);
 	void makealive();
+	void death_anime();
 
 	int set_position_x();
 

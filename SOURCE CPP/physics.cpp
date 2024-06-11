@@ -15,7 +15,7 @@ void physics::innitruch()
 	this->velocitymin = 0.5f;
 	this->velocitymaxy = 15.f;
 	this->accel = 1.05f;
-	this->drag = 0.96f;
+	this->drag = 0.9f;
 	this->grav = 2.f;
 	this->canjump = false;
 }

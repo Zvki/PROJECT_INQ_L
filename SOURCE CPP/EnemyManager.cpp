@@ -5,7 +5,7 @@
 void EnemyManager::innitenemies()
 {
 	float x = 0;
-	for(int i = 0 ; i < 4 ; i++)
+	for(int i = 0 ; i < 6 ; i++)
 	{
 		enemy_vector.emplace_back(new skeleton());
 	}
@@ -15,7 +15,6 @@ void EnemyManager::innitenemies()
 void EnemyManager::add_enemy()
 {
 	enemy_vector.emplace_back(new skeleton());
-
 }
 
 void EnemyManager::check_collision(sf::RenderTarget& window)
@@ -43,13 +42,23 @@ void EnemyManager::update_enemy(player& p, hub& h, anime& a)
 	{
 		if(enemy != nullptr)
 		{
-			enemy->move(p.sprite);
-			enemy->animeenemy(enemy->sprite, p.sprite, h);
-			enemy->enemy_hp_update(p, a);
-			if (enemy->death_condition(p, h, a))
+			if (!enemy->isAlive)
 			{
 				remove_enemy();
+				h.setscore(100);
 				add_enemy();
+			}
+
+			if (enemy->isDying)
+			{
+				enemy->death_anime();
+			}
+			else
+			{
+				enemy->death_condition(p, h, a);
+				enemy->move(p.sprite);
+				enemy->animeenemy(enemy->sprite, p.sprite, h);
+				enemy->enemy_hp_update(p, a);
 			}
 		}
 	}
@@ -63,6 +72,10 @@ void EnemyManager::render_enemy(sf::RenderTarget& window)
 	}
 }
 
+void EnemyManager::attack()
+{
+}
+
 std::vector<enemy*> EnemyManager::get_enemies()
 {
 	return std::vector<enemy*>();
@@ -71,4 +84,8 @@ std::vector<enemy*> EnemyManager::get_enemies()
 EnemyManager::EnemyManager()
 {
 	this->innitenemies();
+}
+
+EnemyManager::~EnemyManager()
+{
 }

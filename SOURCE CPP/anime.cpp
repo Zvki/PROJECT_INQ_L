@@ -13,6 +13,11 @@ anime::~anime()
 {
 }
 
+void anime::setcurrentframe()
+{
+	this->currentFrame.left = 0;
+}
+
 void anime::updateanime(player& pl)
 {
 	if (this->attack_anime == true) {
@@ -22,7 +27,7 @@ void anime::updateanime(player& pl)
 			if (this->animationtimer.getElapsedTime().asMilliseconds() >= 50.f) {
 				this->currentFrame.top = 384.f;
 				this->currentFrame.left += 128.f;
-				if (this->currentFrame.left >= 384.f) {
+				if (this->currentFrame.left > 384.f) {
 					this->currentFrame.left = 0;
 				}
 				this->animationtimer.restart();

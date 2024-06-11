@@ -6,9 +6,7 @@ int main() {
 
 	game game;
 
-	while (game.getWindow().isOpen()) {
-		game.updatemenu();
-	}
-
-	return 0;
+		while (game.getWindow().isOpen()) {
+				game.updatemenu();
+		}
 }

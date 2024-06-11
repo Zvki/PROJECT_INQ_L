@@ -17,17 +17,12 @@ void enemy::move(sf::Sprite s)
 	}
 }
 
-bool enemy::death_condition(player& p, hub& h, anime& a)
+void enemy::death_condition(player& p, hub& h, anime& a)
 {
-		if (this->enemy_hp == 0)
+		if (this->enemy_hp == 0 && !isDying)
 		{
-			h.setscore(100);
-			this->isAlive = false;
-			return true;
-		}
-		else
-		{
-			return false;
+			std::cout << "Enemy is dying\n";
+			isDying = true;
 		}
 }
 
@@ -35,7 +30,7 @@ void enemy::enemy_hp_update(player& p, anime& a)
 {
 	if(std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && a.attack_anime)
 	{
-		this->enemy_hp -= 20;
+		this->enemy_hp -= 5;
 	}
 }
 
@@ -50,19 +45,14 @@ int enemy::set_position_x()
 	std::random_device rd;
 	std::mt19937 gen(rd());
 
-	// Definiowanie dystrybucji dla wyboru zakresu (0 lub 1)
 	std::uniform_int_distribution<> range_choice(0, 1);
 
-	// Definiowanie dystrybucji dla zakresu -100 do 100
-	std::uniform_int_distribution<> distrib1(-100, 100);
+	std::uniform_int_distribution<> distrib1(-100, 0);
 
-	// Definiowanie dystrybucji dla zakresu 2000 do 2100
-	std::uniform_int_distribution<> distrib2(2000, 2100);
+	std::uniform_int_distribution<> distrib2(2100, 2200);
 
-	// Wybór zakresu
 	int choice = range_choice(gen);
 
-	// Generowanie liczby losowej w wybranym zakresie
 	int random_number;
 	if (choice == 0) {
 		return distrib1(gen);
@@ -73,56 +63,79 @@ int enemy::set_position_x()
 	}
 }
 
-void enemy::animeenemy(sf::Sprite s, sf::Sprite p, hub& h)
+void enemy::death_anime()
 {
-	//ATTACK
-	if(this->lenght <= 80)
+	if(!this->animestarted)
 	{
-		if (this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) {
-			this->currentframe.top = 256.f;
-			this->currentframe.left += 128.f;
-			if (this->currentframe.left >= 384.f && this->currentframe.left <= 512.f)
-			{
-				h.updatehpbar();
-			}
-			if (this->currentframe.left >= 896.f) {
-				this->currentframe.left = 0;
-			}
+		this->currentframe.left = 0.f;
+		this->animestarted = true;
+	}
 
-			this->animetimer.restart();
-			this->sprite.setTextureRect(this->currentframe);
+	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.5f || this->getanimeswitch()) && this->isAlive) {
+		std::cout << "Death animation called\n";
+		this->currentframe.top = 384.f;
+		this->currentframe.left += 128.f;
+
+		if (this->currentframe.left >= 384.f) {
+			this->isAlive = false;
+			std::cout << "Animation finished\n";
 		}
+
+		this->animetimer.restart();
+		this->sprite.setTextureRect(this->currentframe);
 	}
-	//MOVING RIGHT
-	else if(p.getPosition().x > s.getPosition().x && this->lenght > 80)
+}
+
+	void enemy::animeenemy(sf::Sprite s, sf::Sprite p, hub & h)
 	{
-		if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
-			this->currentframe.top = 128.f;
-			this->currentframe.left += 128.f;
-			if (this->currentframe.left >= 896.f) {
-				this->currentframe.left = 0;
+		//ATTACK
+		if (this->lenght <= 80)
+		{
+			if (this->animetimer.getElapsedTime().asSeconds() >= 0.15f || this->getanimeswitch()) {
+				this->currentframe.top = 256.f;
+				this->currentframe.left += 128.f;
+				if (this->currentframe.left >= 384.f && this->currentframe.left < 512.f)
+				{
+					h.updatehpbar();
+				}
+				if (this->currentframe.left >= 896.f) {
+					this->currentframe.left = 0;
+				}
+
+				this->animetimer.restart();
+				this->sprite.setTextureRect(this->currentframe);
 			}
-			this->animetimer.restart();
-			this->sprite.setTextureRect(this->currentframe);
 		}
-		this->sprite.setScale(1.5f, 1.5f);
-		this->sprite.setOrigin(0.f, 0.f);
-	}
-	//MOVING LEFT
-	else if(p.getPosition().x < s.getPosition().x && this->lenght > 80)
-	{
-		if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
-			this->currentframe.top = 128.f;
-			this->currentframe.left += 128.f;
-			if (this->currentframe.left >= 896.f) {
-				this->currentframe.left = 0;
+		//MOVING RIGHT
+		else if (p.getPosition().x > s.getPosition().x && this->lenght > 80)
+		{
+			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
+				this->currentframe.top = 128.f;
+				this->currentframe.left += 128.f;
+				if (this->currentframe.left >= 896.f) {
+					this->currentframe.left = 0;
+				}
+				this->animetimer.restart();
+				this->sprite.setTextureRect(this->currentframe);
 			}
-			this->animetimer.restart();
-			this->sprite.setTextureRect(this->currentframe);
+			this->sprite.setScale(1.5f, 1.5f);
+			this->sprite.setOrigin(0.f, 0.f);
 		}
-		this->sprite.setScale(-1.5f, 1.5f);
-		this->sprite.setOrigin(s.getGlobalBounds().width / 2.f, 0.f);
-	}
+		//MOVING LEFT
+		else if (p.getPosition().x < s.getPosition().x && this->lenght > 80)
+		{
+			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
+				this->currentframe.top = 128.f;
+				this->currentframe.left += 128.f;
+				if (this->currentframe.left >= 896.f) {
+					this->currentframe.left = 0;
+				}
+				this->animetimer.restart();
+				this->sprite.setTextureRect(this->currentframe);
+			}
+			this->sprite.setScale(-1.5f, 1.5f);
+			this->sprite.setOrigin(s.getGlobalBounds().width / 2.f, 0.f);
+		}
 }
 
 void enemy::innittexture(std::string s)

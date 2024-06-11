@@ -22,4 +22,5 @@ public:
 
 	EnemyManager();
 	~EnemyManager();
+
 };

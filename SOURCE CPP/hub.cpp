@@ -4,8 +4,9 @@
 #include <filesystem>
 #include <iostream>
 #include <fstream>
+#include <ranges>
 
-
+std::vector<player_score> hub::leaderboard;
 
 hub::hub()
 {
@@ -57,12 +58,11 @@ void hub::innitplayernickname()
 	this->player_nickname_.setFont(this->font_);
 	this->player_nickname_.setCharacterSize(60);
 	this->player_nickname_.setFillColor(sf::Color::White);
-	this->player_nickname_.setPosition(1920/2 - 60, 1080/2);
 }
 
 void hub::updatehpbar()
 {
-		this->playerhp_ -= 5;
+		this->playerhp_ -= 10;
 		this->hpbar_.setString(std::to_string(this->playerhp_));
 }
 void hub::updatescorebar()
@@ -98,7 +98,7 @@ void hub::savescore()
 			std::ofstream score_txt(score_path, std::fstream::app);
 			if(score_txt)
 			{
-				score_txt << std::to_string(this->score_)  << " - " << this->input_player_nickname << "\n";
+				score_txt << std::to_string(this->score_)  << " " << this->input_player_nickname << "\n";
 				score_txt.close();
 				this->score_saved = true;
 			}
@@ -125,6 +125,31 @@ void hub::savescore()
 	}
 }
 
+void hub::getscore()
+{
+	std::cout << "get score active\n" ;
+
+	std::ifstream file("SCORE/PLAYERS.txt");
+	if (!file)
+	{
+		std::cout << "nie mozna otworzyc pliku score";
+		return;
+	}
+
+	player_score ps;
+
+	while (file >> ps.score_points >> ps.player_nickname)
+	{
+		leaderboard.emplace_back(ps);
+	}
+
+	std::ranges::sort(leaderboard, [](const player_score& player1, const player_score& player2)
+		{
+			if (player1.score_points != player2.score_points)
+				return player1.score_points > player2.score_points;
+		}
+	);
+}
 
 size_t hub::getphp()
 {
