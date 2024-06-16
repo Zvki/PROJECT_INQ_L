@@ -3,6 +3,8 @@
 #include "SFML/Graphics.hpp"
 #include <filesystem>
 
+#include "player.h"
+
 
 struct player_score
 {
@@ -39,7 +41,7 @@ public:
 	void innithpbar();
 	void innitscorebar();
 	void innitplayernickname();
-	void updatehpbar();
+	void updatehpbar(player& player);
 	void updatescorebar();
 	void renderhpbar(sf::RenderTarget& target);
 	void renderscorebar(sf::RenderTarget& target);

@@ -1,32 +1,7 @@
-﻿  game.cpp
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\anime.h(15,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(71,122): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(77,122): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(83,118): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(89,128): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(95,128): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
+﻿  EnemyManager.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(37,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
   Trwa generowanie kodu
-  3 of 1561 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  2 of 1561 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu

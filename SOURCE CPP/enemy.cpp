@@ -1,4 +1,5 @@
 #include "enemy.h"
+#include "player.h"
 
 void enemy::move(sf::Sprite s)
 {
@@ -17,7 +18,7 @@ void enemy::move(sf::Sprite s)
 	}
 }
 
-void enemy::death_condition(player& p, hub& h, anime& a)
+void enemy::death_condition(hub& h)
 {
 		if (this->enemy_hp == 0 && !isDying)
 		{
@@ -26,11 +27,14 @@ void enemy::death_condition(player& p, hub& h, anime& a)
 		}
 }
 
-void enemy::enemy_hp_update(player& p, anime& a)
+void enemy::enemy_hp_update(player& p)
 {
-	if(std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && a.attack_anime)
+	if(p.direction != enemy_direction && std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && p.getattackanime())
 	{
 		this->enemy_hp -= 5;
+
+		float healthPercentage = static_cast<float>(this->enemy_hp) / 100.0f; 
+		this->healthBar.setSize(sf::Vector2f(50.f * healthPercentage, 5.f));
 	}
 }
 
@@ -71,7 +75,7 @@ void enemy::death_anime()
 		this->animestarted = true;
 	}
 
-	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.5f || this->getanimeswitch()) && this->isAlive) {
+	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) && this->isAlive) {
 		std::cout << "Death animation called\n";
 		this->currentframe.top = 384.f;
 		this->currentframe.left += 128.f;
@@ -86,17 +90,17 @@ void enemy::death_anime()
 	}
 }
 
-	void enemy::animeenemy(sf::Sprite s, sf::Sprite p, hub & h)
-	{
+void enemy::animeenemy(sf::Sprite s, player& p, hub & h)
+{
 		//ATTACK
-		if (this->lenght <= 80)
+		if (this->lenght <= 80 && !p.player_dying )
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.15f || this->getanimeswitch()) {
 				this->currentframe.top = 256.f;
 				this->currentframe.left += 128.f;
 				if (this->currentframe.left >= 384.f && this->currentframe.left < 512.f)
 				{
-					h.updatehpbar();
+					h.updatehpbar(p);
 				}
 				if (this->currentframe.left >= 896.f) {
 					this->currentframe.left = 0;
@@ -107,7 +111,7 @@ void enemy::death_anime()
 			}
 		}
 		//MOVING RIGHT
-		else if (p.getPosition().x > s.getPosition().x && this->lenght > 80)
+		else if (p.sprite.getPosition().x > s.getPosition().x && this->lenght > 80 && !p.player_dying)
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 				this->currentframe.top = 128.f;
@@ -118,11 +122,12 @@ void enemy::death_anime()
 				this->animetimer.restart();
 				this->sprite.setTextureRect(this->currentframe);
 			}
+			enemy_direction = RIGHT;
 			this->sprite.setScale(1.5f, 1.5f);
-			this->sprite.setOrigin(0.f, 0.f);
+			this->sprite.setOrigin(s.getGlobalBounds().width * 0.05f, 0.f);
 		}
 		//MOVING LEFT
-		else if (p.getPosition().x < s.getPosition().x && this->lenght > 80)
+		else if (p.sprite.getPosition().x < s.getPosition().x && this->lenght > 80 && !p.player_dying)
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 				this->currentframe.top = 128.f;
@@ -133,8 +138,20 @@ void enemy::death_anime()
 				this->animetimer.restart();
 				this->sprite.setTextureRect(this->currentframe);
 			}
+			enemy_direction = LEFT;
 			this->sprite.setScale(-1.5f, 1.5f);
-			this->sprite.setOrigin(s.getGlobalBounds().width / 2.f, 0.f);
+			this->sprite.setOrigin(s.getGlobalBounds().width / 1.75f, 0.f);
+		}else if(p.player_dying)
+		{
+			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
+				this->currentframe.top = 0.f;
+				this->currentframe.left += 128.f;
+				if (this->currentframe.left >= 896.f) {
+					this->currentframe.left = 0;
+				}
+				this->animetimer.restart();
+				this->sprite.setTextureRect(this->currentframe);
+			}
 		}
 }
 
@@ -152,6 +169,12 @@ void enemy::innitsprite()
 	this->currentframe = sf::IntRect(0, 0, 128, 128);
 	this->sprite.setTextureRect(sf::IntRect(this->currentframe));
 	this->sprite.setScale(1.5f,1.5f);
+
+	this->healthBar.setSize(sf::Vector2f(50.f, 5.f)); 
+	this->healthBar.setFillColor(sf::Color::Green);
+
+	this->healthBarBackground.setSize(sf::Vector2f(50.f, 5.f));
+	this->healthBarBackground.setFillColor(sf::Color::Red);
 }
 
 enemy::~enemy()
@@ -173,4 +196,16 @@ bool enemy::getanimeswitch()
 	}
 
 	return animeswitch;
+}
+
+void enemy::draw_hp_bar(sf::RenderWindow& window)
+{
+	sf::Vector2f healthBarPos = this->sprite.getPosition();
+	healthBarPos.x += 200.f;
+	healthBarPos.y -= 10.f; // Adjust as neededsw
+	this->healthBar.setPosition(healthBarPos);
+	this->healthBarBackground.setPosition(healthBarPos);
+
+	window.draw(this->healthBarBackground);
+	window.draw(this->healthBar);
 }

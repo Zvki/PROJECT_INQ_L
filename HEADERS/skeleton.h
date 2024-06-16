@@ -7,7 +7,6 @@
 #include "SFML/Network.hpp"
 #include <iostream>
 #include "enemy.h"
-#include "anime.h"
 #include "hub.h"
 
 class skeleton : public enemy

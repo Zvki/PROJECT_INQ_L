@@ -5,7 +5,7 @@
 void EnemyManager::innitenemies()
 {
 	float x = 0;
-	for(int i = 0 ; i < 6 ; i++)
+	for(int i = 0 ; i < 2 ; i++)
 	{
 		enemy_vector.emplace_back(new skeleton());
 	}
@@ -21,7 +21,7 @@ void EnemyManager::check_collision(sf::RenderTarget& window)
 {
 	for (auto& enemy : this->enemy_vector)
 	{
-		if (enemy->sprite.getPosition().y + enemy->sprite.getGlobalBounds().height >= window.getSize().y - 120)
+		if (enemy->sprite.getPosition().y + enemy->sprite.getGlobalBounds().height >= 960)
 		{
 			enemy->sprite.setPosition(enemy->sprite.getPosition().x, window.getSize().y - enemy->sprite.getGlobalBounds().height - 120);
 		}
@@ -36,7 +36,7 @@ void EnemyManager::remove_enemy()
 		enemy_vector.erase(std::remove_if(enemy_vector.begin(), enemy_vector.end(), isEnemyDead), enemy_vector.end());
 }
 
-void EnemyManager::update_enemy(player& p, hub& h, anime& a)
+void EnemyManager::update_enemy(player& p, hub& h)
 {
 	for (auto& enemy : this->enemy_vector)
 	{
@@ -55,10 +55,10 @@ void EnemyManager::update_enemy(player& p, hub& h, anime& a)
 			}
 			else
 			{
-				enemy->death_condition(p, h, a);
+				enemy->death_condition(h);
 				enemy->move(p.sprite);
-				enemy->animeenemy(enemy->sprite, p.sprite, h);
-				enemy->enemy_hp_update(p, a);
+				enemy->animeenemy(enemy->sprite, p, h);
+				enemy->enemy_hp_update(p);
 			}
 		}
 	}
@@ -69,6 +69,22 @@ void EnemyManager::render_enemy(sf::RenderTarget& window)
 	for(auto& enemy : this->enemy_vector)
 	{
 		window.draw(enemy->sprite);
+
+		sf::Vector2f healthBarPos = enemy->sprite.getPosition();
+		if(enemy->enemy_direction == RIGHT)
+		{
+			healthBarPos.x += 70.f;
+		}else
+		{
+			healthBarPos.x += 30.f;
+		}
+
+		healthBarPos.y += 60.f; // Adjust as needed
+		enemy->healthBar.setPosition(healthBarPos);
+		enemy->healthBarBackground.setPosition(healthBarPos);
+
+		window.draw(enemy->healthBarBackground);
+		window.draw(enemy->healthBar);
 	}
 }
 

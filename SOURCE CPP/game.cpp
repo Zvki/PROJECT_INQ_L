@@ -1,8 +1,6 @@
 #pragma once
 
 #include "game.h"
-#include "physics.h"
-#include "anime.h"
 #include <iostream>
 #include <thread>
 
@@ -11,14 +9,6 @@ void game::innitw()
 {
 	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar);
 	this->window.setFramerateLimit(60);
-}
-
-void game::innitplayer()
-{
-	this->Anime = new anime();
-	this->Physics = new physics();
-	this->Player = new player(*Anime, *Physics);
-	this->Player->setPosition(760.f, 960.f);
 }
 
 void game::innitbackg()
@@ -107,8 +97,6 @@ game::game()
 {
 	this->innitmenu();
 	this->innitw();
-
-	/*this->innitmusic();*/
 }
 
 game::~game()
@@ -159,32 +147,10 @@ void game::you_died()
 
 void game::newgame()
 {
+	this->player_manager_ = new playermanager;
 	this->enemy_manager_ = new EnemyManager;
 	this->innitbackg();
-	this->innitplayer();
 	this->innittile();
-}
-
-void game::updatecollision()
-{
-	//Collision bottom
-	//if (this->Player->sprite.getGlobalBounds().intersects(this->Tile->tiles[0]->sprite.getGlobalBounds())) {
-	if (this->Player->getposition().y + this->Player->getglobalbounds().height >= this->window.getSize().y - 120) {
-		this->Player->setCanJump(true, *Physics);
-		this->Physics->resetvelocityY();
-		this->Player->setPosition(this->Player->getposition().x, this->window.getSize().y - this->Player->getglobalbounds().height - 120);
-	}
-
-	if(this->Player->getposition().x < -80.f)
-	{
-		this->Player->setPosition(-80.f, this->Player->getposition().y);
-	}
-
-	if (this->Player->getposition().x > 1780.f)
-	{
-		this->Player->setPosition(1780.f, this->Player->getposition().y);
-	}
-
 }
 
 void game::updateplayernickname()
@@ -229,12 +195,13 @@ void game::updateplayernickname()
 
 void game::updateplayer()
 {
-	this->Player->update(*Physics, *Anime);
+	this->player_manager_->update_player();
+	this->player_manager_->check_player_colision(this->window);
 }
 
 void game::updateenemy()
 {
-	this->enemy_manager_->update_enemy(*Player, *Hub_, *Anime);
+	this->enemy_manager_->update_enemy(*player_manager_->player_, *Hub_);
 	this->enemy_manager_->check_collision(this->window);
 }
 
@@ -251,6 +218,7 @@ int game::updatemenu()
 			switch (this->GetPressedItem()) {
 			case 0: {
 				delete enemy_manager_;
+				delete player_manager_;
 				this->newgame();
 					this->updateplayernickname();
 				break;
@@ -299,25 +267,25 @@ void game::update()
 					this->event.key.code == sf::Keyboard::S ||
 					this->event.key.code == sf::Keyboard::A ||
 					this->event.key.code == sf::Keyboard::D)) {
-				this->Anime->resetanimetimer();
+				this->player_manager_->player_->resetanimetimer();
 			}
 			else if (this->event.type == sf::Event::KeyPressed)
 			{
 				if (this->event.key.code == sf::Keyboard::H)
 				{
-					this->Anime->setcurrentframe();
-					if (!this->Anime->attack_anime && this->Anime->attack_clock.getElapsedTime() >= this->Anime->attack_cooldown)
+					this->player_manager_->player_->setcurrentframe();
+					if (!this->player_manager_->player_->attack_anime && player_manager_->player_->attack_clock.getElapsedTime() >= this->player_manager_->player_->attack_cooldown)
 					{
-						this->Anime->attack_anime = true;
-						this->Anime->clock.restart();
-						this->Anime->attack_clock.restart();
+						player_manager_->player_->attack_anime = true;
+						player_manager_->player_->clock.restart();
+						player_manager_->player_->attack_clock.restart();
 					}
 				}
 			}
 		}
 
 
-		if (this->Hub_->getphp() == 0)
+		if (!this->player_manager_->player_->player_alive)
 		{
 			this->Hub_->nicknameset = false;
 		}
@@ -325,7 +293,6 @@ void game::update()
 		this->render();
 		this->updateenemy();
 		this->updateplayer();
-		this->updatecollision();
 }
 
 void game::update_scoreboard()
@@ -386,11 +353,6 @@ void game::renderworld()
 	this->Hub_->renderscorebar(this->window);
 }
 
-void game::renderplayer()
-{
-	this->Player->render(this->window);
-}
-
 void game::render_playernickname()
 {
 	this->window.clear();
@@ -422,7 +384,7 @@ void game::render()
 
 	this->enemy_manager_->render_enemy(this->window);
 
-	this->renderplayer();
+	this->player_manager_->render_player(this->window);
 
 	this->window.display();
 

@@ -60,10 +60,17 @@ void hub::innitplayernickname()
 	this->player_nickname_.setFillColor(sf::Color::White);
 }
 
-void hub::updatehpbar()
+void hub::updatehpbar(player& player)
 {
+	if(this->playerhp_ > 0)
+	{
 		this->playerhp_ -= 10;
 		this->hpbar_.setString(std::to_string(this->playerhp_));
+	}else if (this->playerhp_ ==- 0)
+	{
+		player.player_dying = true;
+	}
+
 }
 void hub::updatescorebar()
 {

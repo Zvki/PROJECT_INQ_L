@@ -14,7 +14,7 @@ public:
 	void add_enemy();
 	void check_collision(sf::RenderTarget& window);
 	void remove_enemy();
-	void update_enemy(player& p, hub& h, anime& a);
+	void update_enemy(player& p, hub& h);
 	void render_enemy(sf::RenderTarget& window);
 	void attack();
 

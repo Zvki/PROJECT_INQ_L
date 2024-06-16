@@ -1,14 +1,12 @@
 #pragma once
 
-#include "player.h"
-#include "physics.h"
-#include "anime.h"
+#include "playermanager.h"
 #include "tile.h"
-#include "skeleton.h"
 #include "hub.h"
 #include "regex"
 #include "switchscreens.h"
 #include "EnemyManager.h"
+
 #include "SFML/Audio.hpp"
 #include "SFML/Graphics.hpp"
 #include "SFML/System.hpp"
@@ -35,12 +33,9 @@ private:
 	switchscreens* SS;
 	hub* Hub_;
 	EnemyManager* enemy_manager_;
-	player* Player;
-	physics* Physics;
-	anime* Anime;
+	playermanager* player_manager_;
 
 	void innitplayer();
-	void innitenemy();
 
 	//MAP SECTION
 	tile* Tile;
@@ -64,24 +59,16 @@ private:
 	void innitmenu();
 	void render_playernickname();
 
-
-
-
 public:
 
 	sf::RenderWindow window;
 
-
 	game();
 	virtual ~game();
-
-	void innitall();
 
 	void gamestart();
 	void you_died();
 	void newgame();
-
-	void setnickname();
 
 	//UPDATE SECTION
 	void updatecollision();

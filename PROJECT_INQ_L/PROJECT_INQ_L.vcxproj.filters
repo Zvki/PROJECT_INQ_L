@@ -13,72 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{fe06348e-6db6-443a-be1e-3918add71b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{bf6c0fe7-0a57-4eda-a1c1-b51d273e7b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity&amp;Enemies">
+      <UniqueIdentifier>{ece06133-0564-48c9-bdc0-4f0b1a4d34fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{94e11c19-6d8c-4a27-ab76-36e0053db057}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PROJECT_INQ_L.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\anime.cpp">
-      <Filter>Pliki zasobów</Filter>
+    <ClCompile Include="..\SOURCE CPP\enemy.cpp">
+      <Filter>Entity&amp;Enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\game.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\physics.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\player.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="..\HEADERS\tile.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\enemy.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\skeleton.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\hub.cpp">
-      <Filter>Pliki zasobów</Filter>
+      <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\EnemyManager.cpp">
-      <Filter>Pliki zasobów</Filter>
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\hub.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\skeleton.cpp">
+      <Filter>Entity&amp;Enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\switchscreens.cpp">
-      <Filter>Pliki zasobów</Filter>
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HEADERS\tile.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\playermanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\projectile.cpp">
+      <Filter>Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\HEADERS\anime.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\player.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\physics.h">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\HEADERS\enemy.h">
+      <Filter>Entity&amp;Enemies</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\game.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\tile.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\enemy.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\skeleton.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\hub.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\EnemyManager.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\hub.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\skeleton.h">
+      <Filter>Entity&amp;Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\player.h">
+      <Filter>Player</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\switchscreens.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\tile.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\playermanager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\projectile.h">
+      <Filter>Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
