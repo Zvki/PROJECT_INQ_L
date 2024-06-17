@@ -68,7 +68,7 @@ void hub::updatehpbar(player& player)
 		this->hpbar_.setString(std::to_string(this->playerhp_));
 	}else if (this->playerhp_ ==- 0)
 	{
-		player.player_dying = true;
+		player.isdying = true;
 	}
 
 }

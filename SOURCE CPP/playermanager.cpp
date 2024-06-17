@@ -33,15 +33,15 @@ void playermanager::check_player_colision(sf::RenderTarget& window)
 void playermanager::update_player()
 {
 
-	if(player_->player_dying)
+	if(player_->isdying)
 	{
-		player_->deathanime();
+		player_->death_anime();
 	}
 	else
 	{
 		this->player_->updateruch();
 		this->player_->updatemove();
-		this->player_->updateanime();
+		this->player_->animation();
 	}
 }
 

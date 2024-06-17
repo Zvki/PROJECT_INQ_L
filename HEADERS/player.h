@@ -7,17 +7,16 @@
 #include "SFML/Network.hpp"
 #include <iostream>
 
-enum PLAYER_ANIMATRION_STATES { IDLE = 0, MOVING_LEFT, MOVING_RIGHT, ATTACK_1, ATTACK_2 };
-enum DIRECTION {LEFT, RIGHT};
+#include "Entity.h"
 
-class player
+enum PLAYER_ANIMATRION_STATES { IDLE = 0, MOVING_LEFT, MOVING_RIGHT, ATTACK_1, ATTACK_2 };
+
+
+class player : public entity
 {
 private:
 
-	sf::Texture texturesheet;
-
 	//PHYSICS
-	sf::Vector2f velocity;
 	float velocitymax;
 	float velocitymin;
 	float velocitymaxy;
@@ -29,7 +28,6 @@ private:
 	//ANIMATION
 	short animestate;
 
-	bool animationswitch;
 	bool animestarted = false;
 
 
@@ -38,18 +36,10 @@ private:
 	sf::Time animeDuration_fireball = sf::milliseconds(400.f);
 
 
-	sf::Clock animationtimer;
-
-	sf::IntRect currentFrame;
-
 public:
-
-	DIRECTION direction;
 
 	bool attack_anime = false;
 	bool fireball_attack_anime = false;
-	bool player_alive = true;
-	bool player_dying = false;
 
 	sf::Time attack_cooldown = sf::seconds(1.f);
 	sf::Time fireball_attack_cooldown = sf::seconds(5.f);
@@ -58,7 +48,6 @@ public:
 	sf::Clock fireball_attack_clock;
 	sf::Clock clock;
 
-	sf::Sprite sprite;
 
 	void innitSprite();
 	void innitAnime();
@@ -86,10 +75,10 @@ public:
 
 	//ANIMATION
 	void setcurrentframe();
-	void updateanime();
+	void animation();
 	void innitvariable();
 	void resetanimetimer();
-	void deathanime();
+	void death_anime() override;
 
 	bool getattackanime() { return attack_anime; }
 

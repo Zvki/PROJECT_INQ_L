@@ -300,7 +300,7 @@ void game::update()
 		}
 
 
-		if (!this->player_manager_->player_->player_alive)
+		if (!this->player_manager_->player_->isalive)
 		{
 			this->Hub_->nicknameset = false;
 		}

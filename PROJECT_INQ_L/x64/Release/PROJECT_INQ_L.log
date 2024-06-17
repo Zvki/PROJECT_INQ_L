@@ -1,6 +1,68 @@
-﻿  game.cpp
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(37,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(38,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+﻿  enemy.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(60,6): warning C4101: "random_number": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(74,29): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(80,28): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(81,30): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(99,30): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(100,32): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(117,30): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(118,32): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(133,30): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(134,32): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(147,30): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\enemy.cpp(148,32): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  EnemyManager.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+  game.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
 C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(65,122): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
@@ -26,15 +88,101 @@ C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(89
           [
               T=float
           ]
+  hub.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+  player.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(92,26): warning C4244: "+=": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(146,30): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(147,32): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(167,30): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(168,32): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(186,29): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(187,31): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(198,29): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(199,31): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(214,29): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(215,31): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(248,29): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(254,28): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\player.cpp(255,30): warning C4244: "+=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  playermanager.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+  skeleton.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\skeleton.cpp(19,47): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   switchscreens.cpp
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(37,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
-C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(38,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
 C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\switchscreens.cpp(52,23): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
 C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\switchscreens.cpp(63,92): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+  PROJECT_INQ_L.cpp
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(35,44): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
+C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\HEADERS\player.h(36,53): warning C4244: "argument": konwersja z "float" do "sf::Int32", możliwa utrata danych
   Trwa generowanie kodu
 C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\SOURCE CPP\game.cpp(247): warning C4715: "game::updatemenu”: niewszystkie ścieżki kodu zwracają wartość
-  5 of 1561 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  34 of 1562 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    7 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   PROJECT_INQ_L.vcxproj -> C:\Users\Bartosz Sośnica\source\repos\Zvki\PROJECT_INQ_L\x64\Release\PROJECT_INQ_L.exe

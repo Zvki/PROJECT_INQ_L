@@ -31,7 +31,7 @@ void EnemyManager::check_collision(sf::RenderTarget& window)
 
 void EnemyManager::remove_enemy()
 {
-	auto isEnemyDead = [](enemy* e) { return e == nullptr || !e->isAlive; };
+	auto isEnemyDead = [](enemy* e) { return e == nullptr || !e->isalive; };
 
 		enemy_vector.erase(std::remove_if(enemy_vector.begin(), enemy_vector.end(), isEnemyDead), enemy_vector.end());
 }
@@ -42,14 +42,14 @@ void EnemyManager::update_enemy(player& p, hub& h)
 	{
 		if(enemy != nullptr)
 		{
-			if (!enemy->isAlive)
+			if (!enemy->isalive)
 			{
 				remove_enemy();
 				h.setscore(100);
 				add_enemy();
 			}
 
-			if (enemy->isDying)
+			if (enemy->isdying)
 			{
 				enemy->death_anime();
 			}
@@ -57,7 +57,7 @@ void EnemyManager::update_enemy(player& p, hub& h)
 			{
 				enemy->death_condition(h);
 				enemy->move(p.sprite);
-				enemy->animeenemy(enemy->sprite, p, h);
+				enemy->animation(enemy->sprite, p, h);
 				enemy->enemy_hp_update(p);
 			}
 		}
@@ -71,7 +71,7 @@ void EnemyManager::render_enemy(sf::RenderTarget& window)
 		window.draw(enemy->sprite);
 
 		sf::Vector2f healthBarPos = enemy->sprite.getPosition();
-		if(enemy->enemy_direction == RIGHT)
+		if(enemy->direction_lr == RIGHT)
 		{
 			healthBarPos.x += 70.f;
 		}else

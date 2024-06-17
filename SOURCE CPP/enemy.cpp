@@ -20,16 +20,16 @@ void enemy::move(sf::Sprite s)
 
 void enemy::death_condition(hub& h)
 {
-		if (this->enemy_hp == 0 && !isDying)
+		if (this->enemy_hp == 0 && !isdying)
 		{
 			std::cout << "Enemy is dying\n";
-			isDying = true;
+			isdying = true;
 		}
 }
 
 void enemy::enemy_hp_update(player& p)
 {
-	if(p.direction != enemy_direction && std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && p.getattackanime())
+	if(p.direction_lr != direction_lr && std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && p.getattackanime())
 	{
 		this->enemy_hp -= 5;
 
@@ -40,7 +40,7 @@ void enemy::enemy_hp_update(player& p)
 
 void enemy::makealive()
 {
-	this->isAlive = true;
+	this->isalive= true;
 }
 
 int enemy::set_position_x()
@@ -75,13 +75,13 @@ void enemy::death_anime()
 		this->animestarted = true;
 	}
 
-	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) && this->isAlive) {
+	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.25f || this->getanimeswitch()) && this->isalive) {
 		std::cout << "Death animation called\n";
 		this->currentframe.top = 384.f;
 		this->currentframe.left += 128.f;
 
 		if (this->currentframe.left >= 384.f) {
-			this->isAlive = false;
+			this->isalive = false;
 			std::cout << "Animation finished\n";
 		}
 
@@ -90,10 +90,10 @@ void enemy::death_anime()
 	}
 }
 
-void enemy::animeenemy(sf::Sprite s, player& p, hub & h)
+void enemy::animation(sf::Sprite s, player& p, hub & h)
 {
 		//ATTACK
-		if (this->lenght <= 80 && !p.player_dying )
+		if (this->lenght <= 80 && !p.isdying )
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.15f || this->getanimeswitch()) {
 				this->currentframe.top = 256.f;
@@ -111,7 +111,7 @@ void enemy::animeenemy(sf::Sprite s, player& p, hub & h)
 			}
 		}
 		//MOVING RIGHT
-		else if (p.sprite.getPosition().x > s.getPosition().x && this->lenght > 80 && !p.player_dying)
+		else if (p.sprite.getPosition().x > s.getPosition().x && this->lenght > 80 && !p.isdying)
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 				this->currentframe.top = 128.f;
@@ -122,12 +122,12 @@ void enemy::animeenemy(sf::Sprite s, player& p, hub & h)
 				this->animetimer.restart();
 				this->sprite.setTextureRect(this->currentframe);
 			}
-			enemy_direction = RIGHT;
+			direction_lr = RIGHT;
 			this->sprite.setScale(1.5f, 1.5f);
 			this->sprite.setOrigin(s.getGlobalBounds().width * 0.05f, 0.f);
 		}
 		//MOVING LEFT
-		else if (p.sprite.getPosition().x < s.getPosition().x && this->lenght > 80 && !p.player_dying)
+		else if (p.sprite.getPosition().x < s.getPosition().x && this->lenght > 80 && !p.isdying)
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 				this->currentframe.top = 128.f;
@@ -138,10 +138,10 @@ void enemy::animeenemy(sf::Sprite s, player& p, hub & h)
 				this->animetimer.restart();
 				this->sprite.setTextureRect(this->currentframe);
 			}
-			enemy_direction = LEFT;
+			direction_lr = LEFT;
 			this->sprite.setScale(-1.5f, 1.5f);
 			this->sprite.setOrigin(s.getGlobalBounds().width / 1.75f, 0.f);
-		}else if(p.player_dying)
+		}else if(p.isdying)
 		{
 			if (this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) {
 				this->currentframe.top = 0.f;

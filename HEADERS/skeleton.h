@@ -15,7 +15,6 @@ public:
 
 	void srender(sf::RenderTarget& target);
 	void physics();
-	void attack(player& p, hub& h);
 
 	skeleton();
 	~skeleton();
