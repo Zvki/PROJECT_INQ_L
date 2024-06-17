@@ -35,6 +35,10 @@ void game::innitmenu_background()
 		std::cout << "ERROR: COULD NOT FIND THE BACKGROUND TEXTURE \n";
 	}
 	this->menubg_sprite_.setTexture(this->menubg_texture_);
+	
+	sf::Color color = this->menubg_sprite_.getColor();
+	color.a = 128;
+	this->menubg_sprite_.setColor(color);
 }
 
 void game::innitmenu_font()
@@ -269,17 +273,28 @@ void game::update()
 					this->event.key.code == sf::Keyboard::D)) {
 				this->player_manager_->player_->resetanimetimer();
 			}
-			else if (this->event.type == sf::Event::KeyPressed)
+			else if (this->event.type == sf::Event::KeyPressed && this->event.key.code == sf::Keyboard::H)
 			{
-				if (this->event.key.code == sf::Keyboard::H)
+				this->player_manager_->player_->setcurrentframe();
+				if (!this->player_manager_->player_->attack_anime && player_manager_->player_->attack_clock.getElapsedTime() >= this->player_manager_->player_->attack_cooldown)
 				{
-					this->player_manager_->player_->setcurrentframe();
-					if (!this->player_manager_->player_->attack_anime && player_manager_->player_->attack_clock.getElapsedTime() >= this->player_manager_->player_->attack_cooldown)
-					{
-						player_manager_->player_->attack_anime = true;
-						player_manager_->player_->clock.restart();
-						player_manager_->player_->attack_clock.restart();
-					}
+					player_manager_->player_->attack_anime = true;
+					player_manager_->player_->clock.restart();
+					player_manager_->player_->attack_clock.restart();
+				}
+			}
+			else if (this->event.type == sf::Event::KeyPressed && this->event.key.code == sf::Keyboard::J)
+			{
+				this->player_manager_->player_->setcurrentframe();
+				std::cout << "fireball_attack_anime: " << player_manager_->player_->fireball_attack_anime << "\n";
+				std::cout << "fireball_attack_clock.getElapsedTime(): " << player_manager_->player_->fireball_attack_clock.getElapsedTime().asSeconds() << "\n";
+				std::cout << "fireball_attack_cooldown: " << this->player_manager_->player_->fireball_attack_cooldown.asSeconds() << "\n";
+				if (!this->player_manager_->player_->fireball_attack_anime && player_manager_->player_->fireball_attack_clock.getElapsedTime() >= this->player_manager_->player_->fireball_attack_cooldown)
+				{
+					std::cout << "Fireball anime called\n";
+					player_manager_->player_->fireball_attack_anime= true;
+					player_manager_->player_->clock.restart();
+					player_manager_->player_->fireball_attack_clock.restart();
 				}
 			}
 		}
@@ -432,10 +447,15 @@ void game::MoveDown(sf::Text menu[], int mno)
 void game::renderscore()
 {
 	window.clear();
+
+	this->window.draw(this->menubg_sprite_);
+
+
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "render score active\n";
 		window.draw(this->SS->scores[i]);
 	}
+
 	window.display();
 }

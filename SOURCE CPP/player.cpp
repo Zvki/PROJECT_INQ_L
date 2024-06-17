@@ -137,6 +137,7 @@ void player::setcurrentframe()
 
 void player::updateanime()
 {
+	//BASIC ATTACK
 	if (this->attack_anime == true) {
 		this->animationTime_ = clock.getElapsedTime();
 		if (animationTime_ < animeDuration)
@@ -156,6 +157,28 @@ void player::updateanime()
 			this->attack_anime = false;
 			this->animestate = IDLE;
 		}
+	}
+	if(this->fireball_attack_anime == true)
+	{
+		this->animationTime_ = clock.getElapsedTime();
+		if (animationTime_ < animeDuration_fireball)
+		{
+			if (this->animationtimer.getElapsedTime().asMilliseconds() >= 50.f) {
+				this->currentFrame.top = 640.f;
+				this->currentFrame.left += 128.f;
+				if (this->currentFrame.left > 896.f) {
+					this->currentFrame.left = 0;
+				}
+				this->animationtimer.restart();
+				sprite.setTextureRect(this->currentFrame);
+			}
+		}
+		else
+		{
+			this->fireball_attack_anime = false;
+			this->animestate = IDLE;
+		}
+		
 	}
 	//idle
 	else if (this->animestate == IDLE) {

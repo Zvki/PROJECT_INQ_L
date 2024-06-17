@@ -151,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="..\HEADERS\enemy.h" />
     <ClInclude Include="..\HEADERS\EnemyManager.h" />
+    <ClInclude Include="..\HEADERS\Entity.h" />
     <ClInclude Include="..\HEADERS\game.h" />
     <ClInclude Include="..\HEADERS\hub.h" />
     <ClInclude Include="..\HEADERS\player.h" />

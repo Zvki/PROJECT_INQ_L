@@ -59,7 +59,7 @@ void switchscreens::set_scoreboard(std::vector<player_score> ps_scores)
 		temporarytext.setFont(this->ss_font);
 		temporarytext.setCharacterSize(40);
 		temporarytext.setFillColor(sf::Color::White);
-		temporarytext.setString(std::to_string(i + 1)+ ". " + ps_scores[i].player_nickname + " - " + std::to_string(ps_scores[i].score_points) + "HUJ");
+		temporarytext.setString(std::to_string(i + 1)+ ". " + ps_scores[i].player_nickname + " - " + std::to_string(ps_scores[i].score_points));
 		temporarytext.setPosition(1920 / 2 - temporarytext.getGlobalBounds().width / 2, 1080 / 6 * (i + 1) );
 
 		scores.push_back(temporarytext);

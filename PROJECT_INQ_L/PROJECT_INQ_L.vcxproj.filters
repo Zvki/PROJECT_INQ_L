@@ -22,16 +22,16 @@
     <Filter Include="Entity&amp;Enemies">
       <UniqueIdentifier>{ece06133-0564-48c9-bdc0-4f0b1a4d34fb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Player">
+    <Filter Include="Entity&amp;Enemies\Player">
       <UniqueIdentifier>{94e11c19-6d8c-4a27-ab76-36e0053db057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity&amp;Enemies\Enemies">
+      <UniqueIdentifier>{f56caecf-906e-4edb-a223-3bae5ff7ba2c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PROJECT_INQ_L.cpp">
       <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\enemy.cpp">
-      <Filter>Entity&amp;Enemies</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\game.cpp">
       <Filter>Game</Filter>
@@ -43,10 +43,7 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\player.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\skeleton.cpp">
-      <Filter>Entity&amp;Enemies</Filter>
+      <Filter>Entity&amp;Enemies\Player</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\switchscreens.cpp">
       <Filter>Game</Filter>
@@ -58,13 +55,16 @@
       <Filter>Manager</Filter>
     </ClCompile>
     <ClCompile Include="..\SOURCE CPP\projectile.cpp">
-      <Filter>Player</Filter>
+      <Filter>Entity&amp;Enemies\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\enemy.cpp">
+      <Filter>Entity&amp;Enemies\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SOURCE CPP\skeleton.cpp">
+      <Filter>Entity&amp;Enemies\Enemies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\HEADERS\enemy.h">
-      <Filter>Entity&amp;Enemies</Filter>
-    </ClInclude>
     <ClInclude Include="..\HEADERS\game.h">
       <Filter>Game</Filter>
     </ClInclude>
@@ -74,11 +74,8 @@
     <ClInclude Include="..\HEADERS\hub.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\HEADERS\skeleton.h">
-      <Filter>Entity&amp;Enemies</Filter>
-    </ClInclude>
     <ClInclude Include="..\HEADERS\player.h">
-      <Filter>Player</Filter>
+      <Filter>Entity&amp;Enemies\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\switchscreens.h">
       <Filter>Game</Filter>
@@ -90,7 +87,16 @@
       <Filter>Manager</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\projectile.h">
-      <Filter>Player</Filter>
+      <Filter>Entity&amp;Enemies\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\enemy.h">
+      <Filter>Entity&amp;Enemies\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\skeleton.h">
+      <Filter>Entity&amp;Enemies\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HEADERS\Entity.h">
+      <Filter>Entity&amp;Enemies</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

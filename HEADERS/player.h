@@ -35,6 +35,7 @@ private:
 
 	sf::Time animationTime_;
 	sf::Time animeDuration = sf::milliseconds(250.f);
+	sf::Time animeDuration_fireball = sf::milliseconds(400.f);
 
 
 	sf::Clock animationtimer;
@@ -46,12 +47,15 @@ public:
 	DIRECTION direction;
 
 	bool attack_anime = false;
+	bool fireball_attack_anime = false;
 	bool player_alive = true;
 	bool player_dying = false;
 
 	sf::Time attack_cooldown = sf::seconds(1.f);
+	sf::Time fireball_attack_cooldown = sf::seconds(5.f);
 
 	sf::Clock attack_clock;
+	sf::Clock fireball_attack_clock;
 	sf::Clock clock;
 
 	sf::Sprite sprite;

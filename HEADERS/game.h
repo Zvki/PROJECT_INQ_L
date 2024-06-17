@@ -3,6 +3,7 @@
 #include "playermanager.h"
 #include "tile.h"
 #include "hub.h"
+#include "Entity.h"
 #include "regex"
 #include "switchscreens.h"
 #include "EnemyManager.h"
