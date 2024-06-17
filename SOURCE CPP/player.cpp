@@ -1,7 +1,7 @@
 #include "player.h"
 
 
-void player::innitTexture()
+void player::innittexture()
 {
 
 	if(!this->texturesheet.loadFromFile("TEXTURE/FIRE_WIZARD/fire_wiz.png")){
@@ -10,7 +10,7 @@ void player::innitTexture()
 
 }
 
-void player::innitSprite()
+void player::innitsprite()
 {
 	this->sprite.setTexture(this->texturesheet);
 	currentframe = sf::IntRect(0, 0, 128, 128);
@@ -32,9 +32,10 @@ void player::setCanJump(const bool canJump)
 
 player::player()
 {
+	this->projectile_manager_ = new projectilemanager();
 	innitvariable();
-	this->innitTexture();
-	this->innitSprite();
+	this->innittexture();
+	this->innitsprite();
 	this->innitAnime();
 	innitruch();
 }
@@ -175,6 +176,7 @@ void player::animation()
 		}
 		else
 		{
+			projectile_manager_->innit_fireball(*this);
 			this->fireball_attack_anime = false;
 			this->animestate = IDLE;
 		}
@@ -289,3 +291,158 @@ void player::setPosition(const float x, const float y)
 {
 	this->sprite.setPosition(x, y);
 }
+
+//Projectile
+
+projectile::projectile(player& p)
+{
+	innittexture();
+	innitsprite();
+	this->sprite.setPosition(p.sprite.getPosition().x, 830);
+	if (p.direction_lr == LEFT)
+	{
+		this->direction_lr = LEFT;
+		this->sprite.setScale(-1.f, 1.f);
+	}
+	else
+	{
+		this->direction_lr = RIGHT;
+		this->sprite.setScale(1.f, 1.f);
+		this->sprite.setOrigin(- sprite.getGlobalBounds().width * 2.f, 0.f);
+	}
+}
+
+bool projectile::getanimeswitch()
+{
+	bool animeswitch = this->animeswitch;
+
+	if (this->animeswitch) {
+		this->animeswitch = false;
+	}
+
+	return animeswitch;
+}
+
+void projectile::innittexture()
+{
+	if (!this->texturesheet.loadFromFile("TEXTURE/FIRE_WIZARD/Charge.png")) {
+		std::cout << "ERROR: COULD NOT FIND THE PLAYER IDLE TEXTURE \n";
+	}
+}
+
+void projectile::innitsprite()
+{
+	this->sprite.setTexture(this->texturesheet);
+	currentframe = sf::IntRect(192, 0, 64, 64);
+
+	this->sprite.setTextureRect(sf::IntRect(currentframe));
+}
+
+void projectile::death_anime()
+{
+	if (!this->animestarted)
+	{
+		this->currentframe.left = 320.f;
+		this->animestarted = true;
+	}
+
+	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) && this->isalive) {
+		std::cout << "Death animation called\n";
+		this->currentframe.top = 0.f;
+		this->currentframe.left += 64.f;
+
+		if (this->currentframe.left >= 768.f) {
+			this->isalive = false;
+			std::cout << "Animation finished\n";
+		}
+
+		this->animetimer.restart();
+		this->sprite.setTextureRect(this->currentframe);
+	}
+}
+
+void projectile::move()
+{
+	if (direction_lr == LEFT)
+	{
+		this->sprite.setPosition(sprite.getPosition().x - 10.f, sprite.getPosition().y);
+	}
+	else
+	{
+		this->sprite.setPosition(sprite.getPosition().x + 10.f, sprite.getPosition().y);
+	}
+}
+
+void projectile::animation()
+{
+
+	if ((this->animetimer.getElapsedTime().asSeconds() >= 0.125f || this->getanimeswitch()) && this->animestarted_flying) {
+		std::cout << "Death animation called\n";
+		this->currentframe.top = 0.f;
+		this->currentframe.left += 64.f;
+
+		if (this->currentframe.left >= 256.f) {
+			this->animestarted_flying = false;
+			std::cout << "Animation finished\n";
+		}
+
+		this->animetimer.restart();
+		this->sprite.setTextureRect(this->currentframe);
+	}
+}
+
+//Projectile manager
+
+projectilemanager::projectilemanager()
+{
+
+}
+
+void projectilemanager::update_projectile(player& p)
+{
+	for (auto& fireball : projectile_)
+	{
+		if (fireball != nullptr)
+		{
+			if(!fireball->isalive)
+			{
+				remove_projectile();
+			}
+
+			if(fireball->isdying)
+			{
+				fireball->death_anime();
+			}
+			else
+			{
+				fireball->move();
+				fireball->animation();
+			}
+		}
+	}
+
+}
+
+void projectilemanager::innit_fireball(player& p)
+{
+	projectile_.emplace_back(new projectile(p));
+}
+
+void projectilemanager::render_fireball(sf::RenderTarget& window)
+{
+	for (auto& fireball : projectile_)
+	{
+		if (fireball != nullptr)
+		{
+			window.draw(fireball->sprite);
+		}
+	}
+}
+
+void projectilemanager::remove_projectile()
+{
+	auto isProjectileDead = [](projectile* e) { return e == nullptr || !e->isalive; };
+
+	projectile_.erase(std::remove_if(projectile_.begin(), projectile_.end(), isProjectileDead), projectile_.end());
+}
+

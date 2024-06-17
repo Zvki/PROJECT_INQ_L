@@ -117,6 +117,7 @@ void game::gamestart()
 		}
 		else
 		{
+			this->selecti_ = 0;
 			if (!this->Hub_->score_saved == true)
 			{
 				this->Hub_->savescore();
@@ -151,6 +152,7 @@ void game::you_died()
 
 void game::newgame()
 {
+
 	this->player_manager_ = new playermanager;
 	this->enemy_manager_ = new EnemyManager;
 	this->innitbackg();
@@ -199,14 +201,16 @@ void game::updateplayernickname()
 
 void game::updateplayer()
 {
+	this->player_manager_->player_->projectile_manager_->update_projectile(*player_manager_->player_);
 	this->player_manager_->update_player();
 	this->player_manager_->check_player_colision(this->window);
 }
 
 void game::updateenemy()
 {
+	
 	this->enemy_manager_->update_enemy(*player_manager_->player_, *Hub_);
-	this->enemy_manager_->check_collision(this->window);
+	this->enemy_manager_->check_collision(this->window, *this->player_manager_->player_->projectile_manager_);
 }
 
 int game::updatemenu()
@@ -344,6 +348,7 @@ void game::updateresmenu()
 					return;
 				}
 				case 1: {
+					this->selecti_ = 0;
 					while (this->window.isOpen())
 					{
 						this->updatemenu();
@@ -396,6 +401,8 @@ void game::render()
 	this->window.clear();
 
 	this->renderworld();
+
+	this->player_manager_->player_->projectile_manager_->render_fireball(this->window);
 
 	this->enemy_manager_->render_enemy(this->window);
 

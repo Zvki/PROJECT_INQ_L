@@ -54,9 +54,6 @@
     <ClCompile Include="..\SOURCE CPP\playermanager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
-    <ClCompile Include="..\SOURCE CPP\projectile.cpp">
-      <Filter>Entity&amp;Enemies\Player</Filter>
-    </ClCompile>
     <ClCompile Include="..\SOURCE CPP\enemy.cpp">
       <Filter>Entity&amp;Enemies\Enemies</Filter>
     </ClCompile>
@@ -85,9 +82,6 @@
     </ClInclude>
     <ClInclude Include="..\HEADERS\playermanager.h">
       <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HEADERS\projectile.h">
-      <Filter>Entity&amp;Enemies\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\HEADERS\enemy.h">
       <Filter>Entity&amp;Enemies\Enemies</Filter>

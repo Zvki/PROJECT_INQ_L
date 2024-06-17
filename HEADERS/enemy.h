@@ -42,7 +42,7 @@ public:
 	void animation(sf::Sprite s, player& p, hub& h);
 	void move(sf::Sprite s);
 	void innittexture(std::string s);
-	void innitsprite();
+	void innitsprite() override;
 	void resetanimetimer();
 	bool getanimeswitch();
 

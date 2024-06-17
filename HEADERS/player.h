@@ -8,9 +8,12 @@
 #include <iostream>
 
 #include "Entity.h"
+#include "projectilemanager.h"
+#include "projectile.h"
 
 enum PLAYER_ANIMATRION_STATES { IDLE = 0, MOVING_LEFT, MOVING_RIGHT, ATTACK_1, ATTACK_2 };
 
+class projectilemanager;
 
 class player : public entity
 {
@@ -38,6 +41,8 @@ private:
 
 public:
 
+	projectilemanager* projectile_manager_ ;
+
 	bool attack_anime = false;
 	bool fireball_attack_anime = false;
 
@@ -49,9 +54,9 @@ public:
 	sf::Clock clock;
 
 
-	void innitSprite();
+	void innitsprite() override;
 	void innitAnime();
-	void innitTexture();
+	void innittexture();
 
 	const sf::Vector2f getposition() const;
 	const sf::FloatRect getglobalbounds() const;
@@ -85,3 +90,38 @@ public:
 	const bool& getanimeswitch();
 
 };
+
+class projectile : public entity
+{
+public:
+
+	bool animestarted;
+	bool animestarted_flying = true;
+	bool getanimeswitch();
+
+	projectile(player& p);
+
+	void innittexture();
+	void innitsprite() override;
+	void death_anime() override;
+	void animation();
+	void move();
+};
+
+class projectilemanager
+{
+public:
+
+	std::vector<projectile*> projectile_;
+
+	projectilemanager();
+
+	void update_projectile(player& p);
+	void innit_fireball(player& p);
+	void render_fireball(sf::RenderTarget& window);
+
+	void remove_projectile();
+};
+
+
+

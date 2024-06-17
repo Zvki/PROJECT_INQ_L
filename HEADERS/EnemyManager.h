@@ -12,7 +12,7 @@ public:
 
 	void innitenemies();
 	void add_enemy();
-	void check_collision(sf::RenderTarget& window);
+	void check_collision(sf::RenderTarget& window, projectilemanager& pro);
 	void remove_enemy();
 	void update_enemy(player& p, hub& h);
 	void render_enemy(sf::RenderTarget& window);

@@ -18,5 +18,6 @@ public:
 	DIRECTION direction_lr;
 
 	virtual void death_anime() = 0;
+	virtual void innitsprite() = 0;
 
 };

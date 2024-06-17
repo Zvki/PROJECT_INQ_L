@@ -143,7 +143,6 @@
     <ClCompile Include="..\SOURCE CPP\hub.cpp" />
     <ClCompile Include="..\SOURCE CPP\player.cpp" />
     <ClCompile Include="..\SOURCE CPP\playermanager.cpp" />
-    <ClCompile Include="..\SOURCE CPP\projectile.cpp" />
     <ClCompile Include="..\SOURCE CPP\skeleton.cpp" />
     <ClCompile Include="..\SOURCE CPP\switchscreens.cpp" />
     <ClCompile Include="PROJECT_INQ_L.cpp" />
@@ -156,7 +155,6 @@
     <ClInclude Include="..\HEADERS\hub.h" />
     <ClInclude Include="..\HEADERS\player.h" />
     <ClInclude Include="..\HEADERS\playermanager.h" />
-    <ClInclude Include="..\HEADERS\projectile.h" />
     <ClInclude Include="..\HEADERS\skeleton.h" />
     <ClInclude Include="..\HEADERS\switchscreens.h" />
     <ClInclude Include="..\HEADERS\tile.h" />

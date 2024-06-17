@@ -7,6 +7,7 @@
 #include "regex"
 #include "switchscreens.h"
 #include "EnemyManager.h"
+#include "projectilemanager.h"
 
 #include "SFML/Audio.hpp"
 #include "SFML/Graphics.hpp"
@@ -47,7 +48,7 @@ private:
 	//MENU SECTION
 	const int mnof_ = 3;
 	const int mnor_ = 2;
-	int selecti_;
+	int selecti_ = 0;
 	bool resume_cnt;
 	sf::Texture menubg_texture_;
 	sf::Sprite menubg_sprite_;

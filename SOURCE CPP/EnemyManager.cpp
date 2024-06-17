@@ -2,6 +2,8 @@
 
 #include "skeleton.h"
 
+#include <vector>
+
 void EnemyManager::innitenemies()
 {
 	float x = 0;
@@ -17,13 +19,23 @@ void EnemyManager::add_enemy()
 	enemy_vector.emplace_back(new skeleton());
 }
 
-void EnemyManager::check_collision(sf::RenderTarget& window)
+void EnemyManager::check_collision(sf::RenderTarget& window, projectilemanager& pro)
 {
 	for (auto& enemy : this->enemy_vector)
 	{
 		if (enemy->sprite.getPosition().y + enemy->sprite.getGlobalBounds().height >= 960)
 		{
 			enemy->sprite.setPosition(enemy->sprite.getPosition().x, window.getSize().y - enemy->sprite.getGlobalBounds().height - 120);
+		}
+
+		for(auto& projectile : pro.projectile_)
+		{
+			if (std::abs(projectile->sprite.getPosition().x - enemy->sprite.getPosition().x) < 128)
+			{
+				enemy->healthBar.setFillColor(sf::Color::Red);
+				enemy->isdying = true;
+				projectile->isdying = true;
+			}
 		}
 	}
 }
