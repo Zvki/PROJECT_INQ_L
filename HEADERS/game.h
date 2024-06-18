@@ -24,7 +24,7 @@ private:
 	sf::Event event;
 	sf::Sprite background;
 	sf::Texture backgroundtexture_;
-	sf::Music music_;
+	sf::Music music_[2];
 
 	std::regex allowed_;
 
@@ -49,6 +49,7 @@ private:
 	const int mnof_ = 3;
 	const int mnor_ = 2;
 	int selecti_ = 0;
+	bool music_state = false;
 	bool resume_cnt;
 	sf::Texture menubg_texture_;
 	sf::Sprite menubg_sprite_;
@@ -94,6 +95,8 @@ public:
 	const sf::RenderWindow& getWindow() const;
 
 	//MENU SECTION
+	void playmusic(int i);
+	void stopmusic(int i);
 	void MoveUp(sf::Text menu[]);
 	void MoveDown(sf::Text menu[], int mno);
 	int GetPressedItem() { return selecti_; }

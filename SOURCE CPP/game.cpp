@@ -29,6 +29,23 @@ void game::innittile()
 	Tile->settiles();
 }
 
+void game::playmusic(int i)
+{
+	if(music_state == false)
+	{
+		this->music_[i].play();
+		this->music_[i].setLoop(true);
+		this->music_state = true;
+	}
+
+}
+
+void game::stopmusic(int i)
+{
+	this->music_[i].stop();
+	this->music_state = false;
+}
+
 void game::innitmenu_background()
 {
 	if (!this->menubg_texture_.loadFromFile("TEXTURE/MENU/mbg.png_large")) {
@@ -91,7 +108,13 @@ void game::innitmenu()
 
 void game::innitmusic()
 {
-	if(!this->music_.openFromFile("TEXTURE/MUSIC/main-music.mp3"))
+	if(!this->music_[0].openFromFile("TEXTURE/MUSIC/menu-music.mp3"))
+	{
+		std::cout << "ERROR: COULD NOT FIND THE MUSIC\n";
+	}
+
+
+	if (!this->music_[1].openFromFile("TEXTURE/MUSIC/battle-music.mp3"))
 	{
 		std::cout << "ERROR: COULD NOT FIND THE MUSIC\n";
 	}
@@ -101,6 +124,7 @@ game::game()
 {
 	this->innitmenu();
 	this->innitw();
+	this->innitmusic();
 }
 
 game::~game()
@@ -109,19 +133,20 @@ game::~game()
 
 void game::gamestart()
 {
+
 	while(this->window.isOpen())
 	{
 		if (this->Hub_->nicknameset == true)
 		{
+			playmusic(1);
 			this->update();
 		}
 		else
 		{
 			this->selecti_ = 0;
-			if (!this->Hub_->score_saved == true)
-			{
-				this->Hub_->savescore();
-			}
+			this->Hub_->savescore();
+			this->Hub_->getscore();
+			this->stopmusic(1);
 			this->SS->set_you_died();
 			this->you_died();
 		}
@@ -188,6 +213,7 @@ void game::updateplayernickname()
 			{
 				this->Hub_->nicknameset = true;
 				this->Hub_->score_saved = false;
+				this->stopmusic(0);
 				while (this->window.isOpen())
 				{
 					this->gamestart();
@@ -215,6 +241,9 @@ void game::updateenemy()
 
 int game::updatemenu()
 {
+
+	this->playmusic(0);
+
 	while (this->window.pollEvent(this->event)) {
 		if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::W) {
 			this->MoveUp(Menu_);
@@ -263,6 +292,8 @@ void game::update()
 				{
 					if(resume_cnt)
 					{
+						this->stopmusic(1);
+						this->playmusic(0);
 						this->updateresmenu();
 					}else
 					{
@@ -344,6 +375,7 @@ void game::updateresmenu()
 			else if (this->event.type == sf::Event::KeyReleased && this->event.key.code == sf::Keyboard::Enter) {
 				switch (this->GetPressedItem()) {
 				case 0: {
+					this->stopmusic(0);
 					this->resume_cnt = false;
 					return;
 				}
@@ -402,9 +434,9 @@ void game::render()
 
 	this->renderworld();
 
-	this->player_manager_->player_->projectile_manager_->render_fireball(this->window);
-
 	this->enemy_manager_->render_enemy(this->window);
+
+	this->player_manager_->player_->projectile_manager_->render_fireball(this->window);
 
 	this->player_manager_->render_player(this->window);
 
@@ -456,7 +488,6 @@ void game::renderscore()
 	window.clear();
 
 	this->window.draw(this->menubg_sprite_);
-
 
 	for (int i = 0; i < 5; i++)
 	{

@@ -107,7 +107,6 @@ void hub::savescore()
 			{
 				score_txt << std::to_string(this->score_)  << " " << this->input_player_nickname << "\n";
 				score_txt.close();
-				this->score_saved = true;
 			}
 			else
 			{
@@ -121,8 +120,6 @@ void hub::savescore()
 			if (score_txt)
 			{
 				score_txt << std::to_string(this->score_) << "\n";
-				score_txt.close();
-				this->score_saved = true;
 			}
 			else
 			{
