@@ -47,7 +47,7 @@ public:
 	bool fireball_attack_anime = false;
 
 	sf::Time attack_cooldown = sf::seconds(1.f);
-	sf::Time fireball_attack_cooldown = sf::seconds(5.f);
+	sf::Time fireball_attack_cooldown = sf::seconds(3.f);
 
 	sf::Clock attack_clock;
 	sf::Clock fireball_attack_clock;
@@ -97,6 +97,7 @@ public:
 
 	bool animestarted;
 	bool animestarted_flying = true;
+	bool active = true;
 	bool getanimeswitch();
 
 	projectile(player& p);

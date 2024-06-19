@@ -20,7 +20,7 @@ void enemy::move(sf::Sprite s)
 
 void enemy::death_condition(hub& h)
 {
-		if (this->enemy_hp == 0 && !isdying)
+		if ((this->enemy_hp > 150 || enemy_hp <= 0) && !isdying)
 		{
 			std::cout << "Enemy is dying\n";
 			isdying = true;
@@ -31,7 +31,7 @@ void enemy::enemy_hp_update(player& p)
 {
 	if(p.direction_lr != direction_lr && std::abs(p.sprite.getPosition().x - this->sprite.getPosition().x) < 150 && p.getattackanime())
 	{
-		this->enemy_hp -= 5;
+		this->enemy_hp -= 4;
 
 		float healthPercentage = static_cast<float>(this->enemy_hp) / 100.0f; 
 		this->healthBar.setSize(sf::Vector2f(50.f * healthPercentage, 5.f));

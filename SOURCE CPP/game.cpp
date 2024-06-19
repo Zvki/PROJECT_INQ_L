@@ -7,8 +7,17 @@
 
 void game::innitw()
 {
-	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar);
+	this->window.create(sf::VideoMode(1920, 1080), "Inq", sf::Style::Close | sf::Style::Titlebar | sf::Style::Fullscreen);
 	this->window.setFramerateLimit(60);
+
+	auto image_icon = sf::Image{};
+
+	if(!image_icon.loadFromFile("TEXTURE/MENU/ICON.png"))
+	{
+		
+	}
+
+	this->window.setIcon(image_icon.getSize().x, image_icon.getSize().y, image_icon.getPixelsPtr());
 }
 
 void game::innitbackg()
@@ -118,6 +127,9 @@ void game::innitmusic()
 	{
 		std::cout << "ERROR: COULD NOT FIND THE MUSIC\n";
 	}
+
+	music_[0].setVolume(50);
+	music_[1].setVolume(50);
 }
 
 game::game()

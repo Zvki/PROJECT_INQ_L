@@ -7,7 +7,7 @@
 void EnemyManager::innitenemies()
 {
 	float x = 0;
-	for(int i = 0 ; i < 2 ; i++)
+	for(int i = 0 ; i < 4 ; i++)
 	{
 		enemy_vector.emplace_back(new skeleton());
 	}
@@ -30,11 +30,14 @@ void EnemyManager::check_collision(sf::RenderTarget& window, projectilemanager& 
 
 		for(auto& projectile : pro.projectile_)
 		{
-			if (std::abs(projectile->sprite.getPosition().x - enemy->sprite.getPosition().x) < 128)
+			if (std::abs(projectile->sprite.getPosition().x - enemy->sprite.getPosition().x) < 128 && projectile->active && !enemy->isdying)
 			{
-				enemy->healthBar.setFillColor(sf::Color::Red);
-				enemy->isdying = true;
+				enemy->enemy_hp -= 50;
 				projectile->isdying = true;
+				projectile->active = false;
+
+				float healthPercentage = static_cast<float>(enemy->enemy_hp) / 100.0f;
+				enemy->healthBar.setSize(sf::Vector2f(50.f * healthPercentage, 5.f));
 			}
 		}
 	}
